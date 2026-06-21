@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { overflow-x: hidden; }
+::selection { background: #CE1126; color: #fff; }
+
+/* Stripe backgrounds */
+.ph-stripes {
+  background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.025) 0 14px, rgba(255,255,255,0.05) 14px 28px);
+  background-color: #161616;
+}
+.ph-stripes-red {
+  background-image: repeating-linear-gradient(135deg, rgba(206,17,38,0.06) 0 14px, rgba(206,17,38,0.12) 14px 28px);
+  background-color: #1a0a0c;
+}
+
+/* Input focus styling */
+input:focus, textarea:focus, select:focus {
+  border-color: #CE1126 !important;
+  outline: none;
+}
+
+/* Date input dark scheme */
+input[type="date"], select {
+  color-scheme: dark;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0A0A0A; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #CE1126; }
