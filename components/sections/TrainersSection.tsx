@@ -7,7 +7,7 @@ export default function TrainersSection() {
       {/* Treneri */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-p31-border border border-p31-border mb-[100px]">
         {TRAINERS.map((t) => {
-          const showPhoto = t.tag !== 'STR';
+          const showPhoto = !!t.photo;
           return (
             <div key={t.name} className="bg-p31-bg transition-colors hover:bg-p31-bg-secondary flex flex-col">
               {showPhoto && (

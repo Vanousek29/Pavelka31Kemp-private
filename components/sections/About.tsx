@@ -12,7 +12,7 @@ const reveal = {
 };
 
 export default function About() {
-  const isStat = (a: { kind: string }) => a.kind === 'Statistika' || a.kind === 'Kariera';
+  const isStat = (a: { kind: string }) => a.kind === 'Statistika' || a.kind === 'Kariéra';
   const vizitkaStats = ACHIEVEMENTS.filter(isStat);
   const vizitkaTiles = ACHIEVEMENTS.filter((a) => !isStat(a));
   const vizitkaChips = ['Reprezentace ČR', 'Tipsport ELH', 'OHL · Kanada'];

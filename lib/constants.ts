@@ -1,10 +1,9 @@
 import type { Tier, Trainer, Sponsor, Achievement, Offering, DaySchedule, Rule, GalleryItem, ContactInfo, Product } from './types';
 
-// DOPLNIT: reálné platební údaje od klienta
 export const PAYMENT = {
-  iban: 'CZ6508000000001234567890',
-  bic: 'GIBACZPX',
-  accountPretty: '1234567890 / 0800',
+  iban: 'CZ1030300000003659422010',
+  bic: 'AIRACZPP',
+  accountPretty: '3659422010 / 3030',
   defaultAmount: 3500,
   currency: 'CZK',
 } as const;
@@ -64,9 +63,9 @@ export const TIERS: Tier[] = [
 ];
 
 export const TRAINERS: Trainer[] = [
-  { name: 'Jaroslav Pavelka', role: 'Brankáři', tag: 'JP31', photo: '/media/liberec-karta.jpg' },
-  { name: 'Vítek Benda', role: 'Obránci · tábor', tag: 'OBR' },
-  { name: 'Stanislav Sadovikov', role: 'Útočníci · skills', tag: 'ÚT' },
+  { name: 'Jaroslav Pavelka', role: 'Brankáři', tag: 'JP31', photo: '/media/pavelka.jpg' },
+  { name: 'Vítek Benda', role: 'Obránci · tábor', tag: 'OBR', photo: '/media/benda.jpg' },
+  { name: 'Stanislav Sadovikov', role: 'Útočníci · skills', tag: 'ÚT', photo: '/media/sadovikov.jpg' },
   { name: 'Střelci', role: 'Dorost · juniorka Morava', tag: 'STŘ' },
 ];
 
