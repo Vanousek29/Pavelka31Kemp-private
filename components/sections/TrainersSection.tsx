@@ -51,7 +51,6 @@ export default function TrainersSection() {
             className="bg-p31-bg px-6 py-[52px] flex items-center justify-center gap-3 no-underline transition-colors hover:bg-p31-bg-secondary"
           >
             <span className="font-heading text-[30px] tracking-[0.04em] text-white transition-colors">{s.name}</span>
-            <span className="font-mono text-sm text-p31-red">&nearr;</span>
           </a>
         ))}
       </div>

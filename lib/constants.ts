@@ -9,11 +9,11 @@ export const PAYMENT = {
 } as const;
 
 export const CONTACT: ContactInfo = {
-  email: 'info@pavelka31kemp.cz',
-  phone: '+420 XXX XXX XXX', // DOPLNIT: Jardovo číslo
+  email: 'jaryna61@seznam.cz',
+  phone: '+420 731 739 375',
   instagram: '@pavelka_jaroslav31',
   instagramUrl: 'https://www.instagram.com/pavelka_jaroslav31',
-  company: 'Pavelka 31 Kemp z.s.', // DOPLNIT: IČO a sídlo spolku
+  company: 'Pavelka 31 Kemp z.s.',
 };
 
 export const NAV_ITEMS = [

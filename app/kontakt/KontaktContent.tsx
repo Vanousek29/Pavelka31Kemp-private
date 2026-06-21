@@ -51,7 +51,6 @@ export default function KontaktContent() {
                 <a href={`tel:${CONTACT.phone.replace(/\s/g, '')}`} className="font-heading text-[36px] text-white tracking-[0.02em] no-underline hover:text-p31-red transition-colors">
                   {CONTACT.phone}
                 </a>
-                {/* DOPLNIT: Jardovo cislo */}
               </div>
               <div>
                 <div className="font-mono text-[10px] text-p31-muted tracking-[0.3em] uppercase mb-2.5">Instagram</div>
@@ -62,27 +61,30 @@ export default function KontaktContent() {
                   className="font-heading text-[36px] text-white tracking-[0.02em] no-underline hover:text-p31-red transition-colors inline-flex items-center gap-3.5"
                 >
                   {CONTACT.instagram}
-                  <span className="font-mono text-[20px]">&nearr;</span>
                 </a>
               </div>
               <div>
                 <div className="font-mono text-[10px] text-p31-muted tracking-[0.3em] uppercase mb-2.5">Provozovatel</div>
                 <div className="text-[15px] text-white leading-[1.7]">
                   {CONTACT.company}<br />
-                  <span className="text-p31-muted">{/* DOPLNIT: ICO a sidlo spolku */}</span>
+                  <span className="text-p31-muted">Lhota u Vsetína 307, 755 01 Lhota u Vsetína</span>
                 </div>
               </div>
             </div>
 
-            {/* Map placeholder */}
             <div className="mt-12">
               <div className="font-mono text-[10px] text-p31-muted tracking-[0.3em] uppercase mb-3">Kde nás najdeš</div>
-              <div className="ph-stripes aspect-video flex flex-col items-center justify-center gap-2.5 border border-p31-border relative">
-                <div className="w-7 h-9 border-[1.5px] border-p31-red rounded-[14px_14px_14px_2px] rotate-[-45deg] relative">
-                  <div className="absolute inset-[6px] rounded-full bg-p31-red" />
-                </div>
-                <div className="font-mono text-[10px] text-[rgba(255,255,255,0.4)] tracking-[0.3em] uppercase">Google Maps embed</div>
-                {/* TODO: vlozit embed z Map */}
+              <div className="aspect-video border border-p31-border overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2588.0!2d17.9927!3d49.3344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47134a5e8e8e8e8e%3A0x0!2sLhota+u+Vset%C3%ADna+307%2C+755+01+Lhota+u+Vset%C3%ADna!5e0!3m2!1scs!2scz"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Mapa – Lhota u Vsetína 307"
+                />
               </div>
             </div>
           </div>

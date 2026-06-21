@@ -65,7 +65,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="font-body text-sm text-white no-underline inline-flex items-center gap-2 transition-colors hover:text-p31-red"
             >
-              {CONTACT.instagram} <span className="font-mono text-xs">&nearr;</span>
+              {CONTACT.instagram}
             </a>
           </div>
         </div>
