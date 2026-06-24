@@ -51,7 +51,7 @@ export interface DaySchedule {
   date: string;
   weekday: string;
   sraz: string;
-  blocks: { time: string; label: string }[];
+  blocks: { time: string; label: string; tag?: string }[];
   note: string;
 }
 

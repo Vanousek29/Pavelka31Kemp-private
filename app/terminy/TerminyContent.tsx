@@ -12,6 +12,12 @@ const reveal = {
   transition: { duration: 0.7, ease: [0.2, 0.6, 0.2, 1] as const },
 };
 
+const tagColors: Record<string, string> = {
+  led: '#CE1126',
+  sucha: '#D9A441',
+  video: '#4ade80',
+};
+
 export default function TerminyContent() {
   const [modalOpen, setModalOpen] = useState(false);
   const [defaultRole, setDefaultRole] = useState('');
@@ -40,8 +46,14 @@ export default function TerminyContent() {
             Dva dny intenzivního tréninku na ledě i na suchu. Vyber si kategorii a rezervuj si místo.
           </p>
 
+          {/* Program heading */}
+          <div className="flex items-center gap-4 mt-16 mb-10">
+            <span className="font-mono text-[11px] tracking-[0.3em] text-p31-red uppercase">Program kempu</span>
+            <div className="flex-1 h-px bg-[rgba(255,255,255,0.08)]" />
+          </div>
+
           {/* Program - dny */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12 mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
             {EVENT.days.map((day) => (
               <div key={day.id} className="bg-p31-bg-secondary border border-p31-border p-10">
                 <div className="flex items-baseline justify-between gap-3 mb-1.5">
@@ -52,12 +64,53 @@ export default function TerminyContent() {
                 <div className="flex flex-col gap-px bg-p31-border border border-p31-border mb-5">
                   {day.blocks.map((b) => (
                     <div key={b.time} className="bg-p31-bg-secondary px-[22px] py-[18px] flex items-center justify-between gap-4">
-                      <span className="font-mono text-sm text-p31-red tracking-[0.1em]">{b.time}</span>
+                      <div className="flex items-center gap-3">
+                        {b.tag && (
+                          <span
+                            className="w-2 h-2 rounded-full flex-shrink-0"
+                            style={{ backgroundColor: tagColors[b.tag] || '#B0B0B0' }}
+                          />
+                        )}
+                        <span className="font-mono text-sm text-p31-red tracking-[0.1em]">{b.time}</span>
+                      </div>
                       <span className="text-[15px] text-white">{b.label}</span>
                     </div>
                   ))}
                 </div>
                 <p className="text-sm leading-[1.6] text-p31-muted m-0">{day.note}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Legenda */}
+          <div className="flex flex-wrap gap-5 mb-20">
+            <span className="inline-flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#CE1126' }} />
+              <span className="font-mono text-[10px] text-p31-muted tracking-[0.15em] uppercase">Led</span>
+            </span>
+            <span className="inline-flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#D9A441' }} />
+              <span className="font-mono text-[10px] text-p31-muted tracking-[0.15em] uppercase">Suchá příprava</span>
+            </span>
+            <span className="inline-flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#4ade80' }} />
+              <span className="font-mono text-[10px] text-p31-muted tracking-[0.15em] uppercase">Video / ostatní</span>
+            </span>
+          </div>
+
+          {/* Hosté tréninku */}
+          <div className="flex items-center gap-4 mb-10">
+            <span className="font-mono text-[11px] tracking-[0.3em] text-p31-red uppercase">Hosté tréninku</span>
+            <div className="flex-1 h-px bg-[rgba(255,255,255,0.08)]" />
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-20">
+            {EVENT.guests.map((g) => (
+              <div key={g.name} className="bg-p31-bg-secondary border border-p31-border p-8 flex flex-col items-start">
+                <div className="w-10 h-10 bg-[rgba(206,17,38,0.12)] border border-[rgba(206,17,38,0.3)] flex items-center justify-center mb-5">
+                  <span className="font-heading text-[18px] text-p31-red leading-none">{g.name.charAt(0)}</span>
+                </div>
+                <div className="font-heading text-[22px] text-white tracking-[0.02em] leading-tight mb-1.5">{g.name}</div>
+                <div className="font-mono text-[10px] text-p31-muted tracking-[0.2em] uppercase">{g.role}</div>
               </div>
             ))}
           </div>

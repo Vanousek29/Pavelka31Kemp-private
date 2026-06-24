@@ -34,10 +34,11 @@ export const EVENT = {
       id: 'd1',
       date: '26. 6.',
       weekday: 'Pátek',
-      sraz: 'Sraz 14:30',
+      sraz: 'Sraz 14:45',
       blocks: [
-        { time: '15:15–16:15', label: 'Trénink na ledě' },
-        { time: '16:45–17:15', label: 'Suchá příprava' },
+        { time: '15:15–16:15', label: 'Trénink na ledě', tag: 'led' },
+        { time: '16:40–17:00', label: 'Suchá příprava', tag: 'sucha' },
+        { time: '17:15–17:30', label: 'Video analýza + káva', tag: 'video' },
       ],
       note: 'Možnost společné večeře (hradí každý sám). Ovoce a voda k dispozici.',
     },
@@ -45,14 +46,19 @@ export const EVENT = {
       id: 'd2',
       date: '27. 6.',
       weekday: 'Sobota',
-      sraz: 'Sraz nejpozději 9:00',
+      sraz: 'Sraz 9:00',
       blocks: [
-        { time: '10:00–11:00', label: 'Trénink na ledě' },
-        { time: '+ 30 min', label: 'Suchá příprava + led' },
+        { time: '9:10–9:30', label: 'Suchá příprava', tag: 'sucha' },
+        { time: '10:00–11:00', label: 'Trénink na ledě', tag: 'led' },
       ],
       note: 'Po tréninku výklus, video a káva / voda zdarma. Každý dostane malý dárek.',
     },
   ] as DaySchedule[],
+  guests: [
+    { name: 'Michal Gago', role: 'Host tréninku · hráči' },
+    { name: 'Libor Kašík', role: 'Host tréninku · brankáři' },
+    { name: 'Martin Vojtek', role: 'Brankářský kemp · sobota' },
+  ],
   included: ['Ovoce a voda k dispozici', 'Video analýza po tréninku', 'Výklus po zátěži', 'Káva / voda zdarma', 'Malý dárek pro každého'],
 };
 
