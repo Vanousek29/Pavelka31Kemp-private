@@ -41,10 +41,15 @@ export default function RegistrationForm({ open, onClose, defaultRole = '' }: Re
   const isValid = form.role && form.firstName.trim() && form.lastName.trim() && form.birthDate && form.email.trim() && form.phone.trim() && form.agreeRules && form.agreeGdpr;
 
   const handleSubmit = () => {
-    if (!isValid) return;
+    if (!isValid || !selectedTier) return;
     const vs = generateVS();
-    // TODO: napojit na backend (Formspree / Supabase / API route)
-    const data = { ...form, vs, tier: selectedTier, timestamp: new Date().toISOString() };
+    const data = {
+      ...form,
+      vs,
+      typUcasti: selectedTier.role,
+      cena: selectedTier.priceCzk,
+      timestamp: new Date().toISOString(),
+    };
     localStorage.setItem(`registration-${vs}`, JSON.stringify(data));
     onClose();
     router.push(`/platba/${vs}`);
@@ -70,30 +75,30 @@ export default function RegistrationForm({ open, onClose, defaultRole = '' }: Re
 
       {/* Body */}
       <div className="px-6 md:px-10 py-8">
-        {/* Kategorie */}
+        {/* Typ účasti */}
         <div className="mb-6">
-          <div className="font-mono text-[10px] text-p31-muted tracking-[0.2em] uppercase mb-2.5">Kategorie <span className="text-p31-red">*</span></div>
-          <div className="grid grid-cols-3 gap-2">
-            {TIERS.map((t) => {
-              const active = form.role === t.key;
-              return (
-                <button
-                  key={t.key}
-                  onClick={() => set('role', t.key)}
-                  className="p-3 cursor-pointer text-left transition-all border"
-                  style={{
-                    background: active ? '#CE1126' : '#0A0A0A',
-                    borderColor: active ? '#CE1126' : 'rgba(255,255,255,0.12)',
-                    color: active ? '#fff' : '#B0B0B0',
-                  }}
-                >
-                  <div className="font-body text-[12px] font-semibold tracking-[0.04em]">{t.role}</div>
-                  <div className="font-heading text-[24px] tracking-[0.02em] mt-1 leading-none">{t.price}</div>
-                </button>
-              );
-            })}
-          </div>
+          <div className="font-mono text-[10px] text-p31-muted tracking-[0.2em] uppercase mb-2.5">Typ účasti <span className="text-p31-red">*</span></div>
+          <select
+            value={form.role}
+            onChange={(e) => set('role', e.target.value)}
+            className="w-full bg-p31-bg border border-p31-border-light text-white px-3.5 py-3 font-body text-sm outline-none"
+          >
+            <option value="">Vyber typ účasti...</option>
+            {TIERS.map((t) => (
+              <option key={t.key} value={t.key}>
+                {t.role} ({t.price})
+              </option>
+            ))}
+          </select>
         </div>
+
+        {selectedTier && (
+          <div className="mb-6 text-center">
+            <span className="font-heading text-[28px] text-p31-red tracking-[0.02em]">
+              Celková cena: {selectedTier.priceCzk.toLocaleString('cs-CZ')} Kč
+            </span>
+          </div>
+        )}
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <InputField label="Jméno" required value={form.firstName} onChange={(v) => set('firstName', v)} placeholder="Tomáš" />

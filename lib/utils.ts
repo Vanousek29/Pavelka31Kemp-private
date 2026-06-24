@@ -18,6 +18,8 @@ export function formatDate(dateStr: string): string {
 }
 
 export function generateVS(): string {
-  const ts = Date.now().toString().slice(-6);
-  return '20260' + ts.slice(-3);
+  const now = new Date();
+  const date = `${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, '0')}${String(now.getDate()).padStart(2, '0')}`;
+  const rand = String(Math.floor(Math.random() * 1000)).padStart(3, '0');
+  return date + rand;
 }

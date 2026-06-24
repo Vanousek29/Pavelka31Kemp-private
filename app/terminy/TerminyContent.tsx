@@ -69,10 +69,10 @@ export default function TerminyContent() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {TIERS.map((t) => (
-              <div key={t.key} className="bg-p31-bg-secondary border border-p31-border p-9 flex flex-col transition-all hover:border-[rgba(206,17,38,0.4)] hover:-translate-y-1">
-                <div className="font-mono text-[10px] tracking-[0.25em] uppercase text-p31-muted mb-[18px]">{t.role}</div>
-                <div className="font-heading text-[64px] text-white leading-none tracking-[0.02em]">{t.price}</div>
-                <p className="text-sm leading-[1.6] text-p31-muted mt-[18px] mb-7 flex-1">{t.desc}</p>
+              <div key={t.key} className="bg-p31-bg-secondary border border-p31-border p-8 flex flex-col transition-all hover:border-[rgba(206,17,38,0.4)] hover:-translate-y-1">
+                <div className="font-mono text-[10px] tracking-[0.25em] uppercase text-p31-muted mb-[14px]">{t.role}</div>
+                <div className="font-heading text-[48px] text-white leading-none tracking-[0.02em]">{t.price}</div>
+                <p className="text-sm leading-[1.6] text-p31-muted mt-[14px] mb-6 flex-1">{t.desc}</p>
                 <button
                   onClick={() => openRegistration(t.key)}
                   className="bg-p31-red text-white border-none px-[22px] py-4 font-body text-[12px] font-semibold tracking-[0.18em] uppercase cursor-pointer transition-all hover:bg-p31-red-hover hover:shadow-[0_0_24px_rgba(206,17,38,0.4)]"

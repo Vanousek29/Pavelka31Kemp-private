@@ -56,10 +56,20 @@ export const EVENT = {
   included: ['Ovoce a voda k dispozici', 'Video analýza po tréninku', 'Výklus po zátěži', 'Káva / voda zdarma', 'Malý dárek pro každého'],
 };
 
+export const PRICES = {
+  brankar_1den: 699,
+  hrac_1den: 499,
+  strelec: 199,
+  brankar_2dny: 1050,
+  hrac_2dny: 1050,
+} as const;
+
 export const TIERS: Tier[] = [
-  { key: 'brankar', role: 'Brankář', price: '699 Kč', priceCzk: 699, desc: 'Kompletní program – led, suchá příprava i video analýza.' },
-  { key: 'hrac', role: 'Hráč / dovednosti', price: '599 Kč', priceCzk: 599, desc: 'Dovednostní trénink a střelba s trenéry.' },
-  { key: 'strelec', role: 'Střelec', price: '200 Kč', priceCzk: 200, desc: 'Jen střelba na brankáře (na ledě).' },
+  { key: 'brankar_1den', role: 'Brankář – 1 den', price: '699 Kč', priceCzk: 699, desc: 'Kompletní program – led, suchá příprava i video analýza. Jeden den.' },
+  { key: 'brankar_2dny', role: 'Brankář – 2 dny', price: '1 050 Kč', priceCzk: 1050, desc: 'Kompletní program – led, suchá příprava i video analýza. Oba dny.' },
+  { key: 'hrac_1den', role: 'Hráč – 1 den', price: '499 Kč', priceCzk: 499, desc: 'Dovednostní trénink a střelba s trenéry. Jeden den.' },
+  { key: 'hrac_2dny', role: 'Hráč – 2 dny', price: '1 050 Kč', priceCzk: 1050, desc: 'Dovednostní trénink a střelba s trenéry. Oba dny.' },
+  { key: 'strelec', role: 'Střelec – pouze střelba na branku', price: '199 Kč', priceCzk: 199, desc: 'Jen střelba na brankáře (na ledě).' },
 ];
 
 export const TRAINERS: Trainer[] = [

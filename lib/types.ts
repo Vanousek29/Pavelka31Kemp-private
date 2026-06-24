@@ -86,6 +86,13 @@ export interface Registration {
   agreeGdpr: boolean;
 }
 
+export interface StoredRegistration extends Registration {
+  vs: string;
+  typUcasti: string;
+  cena: number;
+  timestamp: string;
+}
+
 export interface Product {
   id: number;
   category: string;

@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import QRPayment from '@/components/QRPayment';
-import type { Registration } from '@/lib/types';
+import type { StoredRegistration } from '@/lib/types';
 
 const reveal = {
   initial: { opacity: 0, y: 24 },
@@ -18,7 +18,7 @@ interface PlatbaContentProps {
 }
 
 export default function PlatbaContent({ id }: PlatbaContentProps) {
-  const [registration, setRegistration] = useState<Registration | null>(null);
+  const [registration, setRegistration] = useState<StoredRegistration | null>(null);
 
   useEffect(() => {
     const data = localStorage.getItem(`registration-${id}`);
