@@ -140,31 +140,38 @@ export default function About() {
           </div>
         </div>
 
-        {/* Motto na ledě */}
-        <div className="mt-24 relative overflow-hidden border-l-2 border-l-p31-red bg-gradient-to-r from-[rgba(206,17,38,0.10)] via-[rgba(206,17,38,0.03)] to-transparent bg-[#0d0d0d] px-7 md:px-12 py-12 md:py-16">
-          <div
-            className="font-heading text-white leading-[1.05] tracking-[0.04em]"
-            style={{ fontSize: 'clamp(40px, 6vw, 88px)' }}
-          >
-            {MOTTOS.led}
+        {/* Motta */}
+        <div className="mt-24 grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {/* Motto na ledě */}
+          <div className="border border-[rgba(255,255,255,0.08)] border-l-2 border-l-p31-red bg-[#0d0d0d] px-7 md:px-10 py-10 md:py-12 flex flex-col">
+            <div className="font-mono text-[10px] md:text-[11px] text-p31-red tracking-[0.3em] uppercase mb-7">
+              Motto na ledě
+            </div>
+            <div
+              className="font-heading text-white leading-[1.05] tracking-[0.04em] mt-auto"
+              style={{ fontSize: 'clamp(40px, 4.4vw, 64px)' }}
+            >
+              {MOTTOS.led}
+            </div>
           </div>
-          <div className="font-mono text-[10px] md:text-[11px] text-p31-red tracking-[0.3em] uppercase mt-6">
-            Motto na ledě
-          </div>
-        </div>
 
-        {/* Životní motto */}
-        <div className="mt-12 max-w-[860px] mx-auto text-center px-4 py-10">
-          <div className="font-heading text-p31-red leading-[0.4] opacity-70 text-[80px] md:text-[110px]">
-            &ldquo;
-          </div>
-          <p className="mt-[-18px] font-body italic text-[#e9e9e9] font-light leading-[1.5]"
-            style={{ fontSize: 'clamp(22px, 2.6vw, 28px)' }}
-          >
-            {MOTTOS.zivot}
-          </p>
-          <div className="mt-7 font-mono text-[11px] text-p31-red tracking-[0.3em] uppercase text-right">
-            &mdash; Jaroslav Pavelka
+          {/* Životní motto */}
+          <div className="border border-[rgba(255,255,255,0.08)] bg-[rgba(206,17,38,0.04)] px-7 md:px-10 py-10 md:py-12 flex flex-col">
+            <div className="font-mono text-[10px] md:text-[11px] text-p31-red tracking-[0.3em] uppercase mb-3">
+              Životní motto
+            </div>
+            <div className="font-heading text-p31-red leading-[0.4] opacity-70 text-[72px] md:text-[96px]">
+              &ldquo;
+            </div>
+            <p
+              className="mt-[-14px] font-body italic text-[#e9e9e9] font-light leading-[1.5]"
+              style={{ fontSize: 'clamp(22px, 2.4vw, 28px)' }}
+            >
+              {MOTTOS.zivot}
+            </p>
+            <div className="mt-auto pt-7 font-mono text-[11px] text-p31-red tracking-[0.3em] uppercase text-right">
+              &mdash; Jaroslav Pavelka
+            </div>
           </div>
         </div>
       </div>
