@@ -141,10 +141,10 @@ export default function About() {
         </div>
 
         {/* Motta */}
-        <div className="mt-24 grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="mt-24 grid grid-cols-1 lg:grid-cols-2 gap-px bg-[rgba(255,255,255,0.08)] border border-[rgba(255,255,255,0.08)]">
           {/* Motto na ledě */}
-          <div className="border border-[rgba(255,255,255,0.08)] border-l-2 border-l-p31-red bg-[#0d0d0d] px-7 md:px-10 py-10 md:py-12 flex flex-col">
-            <div className="font-mono text-[10px] md:text-[11px] text-p31-red tracking-[0.3em] uppercase mb-7">
+          <div className="relative bg-[#0f0f0f] border-l-[3px] border-l-p31-red px-7 md:px-10 py-10 md:py-12 flex flex-col">
+            <div className="font-mono text-[10px] text-p31-red tracking-[0.3em] uppercase mb-7">
               Motto na ledě
             </div>
             <div
@@ -156,15 +156,19 @@ export default function About() {
           </div>
 
           {/* Životní motto */}
-          <div className="border border-[rgba(255,255,255,0.08)] bg-[rgba(206,17,38,0.04)] px-7 md:px-10 py-10 md:py-12 flex flex-col">
-            <div className="font-mono text-[10px] md:text-[11px] text-p31-red tracking-[0.3em] uppercase mb-3">
+          <div className="relative overflow-hidden bg-[#0f0f0f] border-l-[3px] border-l-p31-red px-7 md:px-10 py-10 md:py-12 flex flex-col">
+            <span
+              aria-hidden
+              className="pointer-events-none select-none absolute top-3 right-5 font-heading text-p31-red opacity-30 leading-none"
+              style={{ fontSize: 'clamp(90px, 11vw, 140px)' }}
+            >
+              &rdquo;
+            </span>
+            <div className="font-mono text-[10px] text-p31-red tracking-[0.3em] uppercase mb-7">
               Životní motto
             </div>
-            <div className="font-heading text-p31-red leading-[0.4] opacity-70 text-[72px] md:text-[96px]">
-              &ldquo;
-            </div>
             <p
-              className="mt-[-14px] font-body italic text-[#e9e9e9] font-light leading-[1.5]"
+              className="relative font-body italic text-[#e9e9e9] font-light leading-[1.5]"
               style={{ fontSize: 'clamp(22px, 2.4vw, 28px)' }}
             >
               {MOTTOS.zivot}
