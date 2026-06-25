@@ -16,6 +16,11 @@ export const CONTACT: ContactInfo = {
   company: 'Pavelka 31 Kemp z.s.',
 };
 
+export const MOTTOS = {
+  led: 'Pokora. Respekt. Práce. Každý den.',
+  zivot: 'Tvrdě pracuj, jez s dobrými lidmi a miluj jednu ženu.',
+} as const;
+
 export const NAV_ITEMS = [
   { label: 'Domů', href: '/' },
   { label: 'Termíny', href: '/terminy' },
