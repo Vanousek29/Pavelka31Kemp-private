@@ -12,17 +12,17 @@ export interface Camp {
   status: 'open' | 'few_spots' | 'full';
 }
 
+// Strukturální data tieru – texty (role, desc) jsou v překladech pod terminy.tiers.<key>
 export interface Tier {
   key: string;
-  role: string;
   price: string;
   priceCzk: number;
-  desc: string;
+  // contact = cena na dotaz / mimo standardní registraci → tlačítko vede na kontakt
+  contact?: boolean;
 }
 
+// Trenér – jméno i role jsou v překladech pod trainers.byTag.<tag>
 export interface Trainer {
-  name: string;
-  role: string;
   tag: string;
   photo?: string;
 }
@@ -32,43 +32,32 @@ export interface Sponsor {
   url: string;
 }
 
+// Vizitka – mark (barva) je strukturální, isStat určuje umístění; texty v about.achievements (dle pořadí)
 export interface Achievement {
   mark: string;
-  kind: string;
-  title: string;
-  detail: string;
+  isStat: boolean;
 }
 
+// Offering – num a glyph jsou strukturální; texty v features.offerings (dle pořadí)
 export interface Offering {
   num: string;
   glyph: string;
-  title: string;
-  desc: string;
 }
 
+// Den programu – časy a tagy jsou strukturální; texty v event.days.<id>
 export interface DaySchedule {
   id: string;
-  date: string;
-  weekday: string;
-  sraz: string;
-  blocks: { time: string; label: string; tag?: string }[];
-  note: string;
-}
-
-export interface Rule {
-  num: string;
-  title: string;
-  body: string;
+  blocks: { time: string; tag?: string }[];
 }
 
 export interface GalleryItem {
   id: number;
-  tag: string;
-  label: string;
   isVideo: boolean;
   src: string;
   aspect: string;
   stripeClass: string;
+  // Doplňuje se za běhu z překladů (alt text / popisek)
+  label?: string;
 }
 
 export interface Registration {
@@ -93,10 +82,9 @@ export interface StoredRegistration extends Registration {
   timestamp: string;
 }
 
+// Produkt – priceLabel zůstává (CZK); category a name jsou v překladech pod merch.products.<id>
 export interface Product {
   id: number;
-  category: string;
-  name: string;
   priceLabel: string;
   available: boolean;
 }

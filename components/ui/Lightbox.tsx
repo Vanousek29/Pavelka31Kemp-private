@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useCallback } from 'react';
+import { useTranslations } from 'next-intl';
 import type { GalleryItem } from '@/lib/types';
 
 interface LightboxProps {
@@ -12,6 +13,7 @@ interface LightboxProps {
 }
 
 export default function Lightbox({ items, currentIndex, onClose, onPrev, onNext }: LightboxProps) {
+  const t = useTranslations('gallery');
   const item = items[currentIndex];
 
   const handleKeyDown = useCallback((e: KeyboardEvent) => {
@@ -40,7 +42,7 @@ export default function Lightbox({ items, currentIndex, onClose, onPrev, onNext 
       <button
         onClick={onClose}
         className="absolute top-6 right-6 w-11 h-11 bg-transparent border border-[rgba(255,255,255,0.2)] text-white cursor-pointer font-mono text-lg z-[2] hover:border-p31-red transition-colors"
-        aria-label="Zavřít"
+        aria-label={t('close')}
       >
         &times;
       </button>
@@ -49,7 +51,7 @@ export default function Lightbox({ items, currentIndex, onClose, onPrev, onNext 
       <button
         onClick={(e) => { e.stopPropagation(); onPrev(); }}
         className="absolute left-6 top-1/2 -translate-y-1/2 w-14 h-14 bg-[rgba(0,0,0,0.4)] border border-[rgba(255,255,255,0.2)] text-white cursor-pointer font-heading text-2xl z-[2] hover:border-p31-red transition-colors"
-        aria-label="Předchozí"
+        aria-label={t('prev')}
       >
         &lsaquo;
       </button>
@@ -58,7 +60,7 @@ export default function Lightbox({ items, currentIndex, onClose, onPrev, onNext 
       <button
         onClick={(e) => { e.stopPropagation(); onNext(); }}
         className="absolute right-6 top-1/2 -translate-y-1/2 w-14 h-14 bg-[rgba(0,0,0,0.4)] border border-[rgba(255,255,255,0.2)] text-white cursor-pointer font-heading text-2xl z-[2] hover:border-p31-red transition-colors"
-        aria-label="Další"
+        aria-label={t('next')}
       >
         &rsaquo;
       </button>
@@ -78,7 +80,7 @@ export default function Lightbox({ items, currentIndex, onClose, onPrev, onNext 
             // eslint-disable-next-line @next/next/no-img-element
             <img
               src={item.src}
-              alt={item.label}
+              alt={item.label ?? ''}
               className="max-w-full max-h-[82vh] object-contain block"
             />
           )}

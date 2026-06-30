@@ -1,11 +1,13 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { useTranslations } from 'next-intl';
+import { Link, usePathname } from '@/i18n/navigation';
 import { NAV_ITEMS } from '@/lib/constants';
+import LangSwitcher from './LangSwitcher';
 
 export default function Navbar() {
+  const t = useTranslations('nav');
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
 
@@ -32,7 +34,7 @@ export default function Navbar() {
           </div>
           <div className="flex flex-col items-start leading-none">
             <span className="font-heading text-[18px] tracking-[0.12em] text-white">PAVELKA</span>
-            <span className="font-mono text-[9px] tracking-[0.3em] text-p31-muted mt-[2px]">GOALIE CAMP</span>
+            <span className="font-mono text-[9px] tracking-[0.3em] text-p31-muted mt-[2px]">{t('brandTag')}</span>
           </div>
         </Link>
 
@@ -46,7 +48,7 @@ export default function Navbar() {
                 pathname === item.href ? 'text-white' : 'text-p31-muted'
               }`}
             >
-              {item.label}
+              {t(`items.${item.key}`)}
               {pathname === item.href && (
                 <span className="absolute bottom-1 left-4 right-4 h-[1.5px] bg-p31-red" />
               )}
@@ -56,15 +58,16 @@ export default function Navbar() {
             href="/terminy"
             className="ml-4 bg-p31-red border-none px-[22px] py-3 font-body text-[12px] font-semibold tracking-[0.16em] uppercase text-white no-underline transition-all hover:bg-p31-red-hover hover:shadow-[0_0_24px_rgba(206,17,38,0.4)]"
           >
-            Registrace &rarr;
+            {t('register')} &rarr;
           </Link>
+          <LangSwitcher className="ml-4" />
         </div>
 
         {/* Mobile hamburger */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="flex md:hidden w-11 h-11 items-center justify-center flex-col gap-[5px] bg-transparent border border-p31-border-lighter cursor-pointer p-0"
-          aria-label={menuOpen ? 'Zavřít menu' : 'Otevřít menu'}
+          aria-label={menuOpen ? t('closeMenu') : t('openMenu')}
         >
           <span
             className="w-[18px] h-[1.5px] bg-white block transition-all duration-200"
@@ -92,6 +95,10 @@ export default function Navbar() {
             onClick={(e) => e.stopPropagation()}
             className="flex flex-col gap-1 max-w-[480px] mx-auto"
           >
+            {/* Přepínač jazyka nahoře v menu */}
+            <div className="flex justify-end mb-2">
+              <LangSwitcher />
+            </div>
             {NAV_ITEMS.map((item) => (
               <Link
                 key={item.href}
@@ -100,7 +107,7 @@ export default function Navbar() {
                   pathname === item.href ? 'text-white' : 'text-p31-muted'
                 }`}
               >
-                <span>{item.label}</span>
+                <span>{t(`items.${item.key}`)}</span>
                 <span className="font-mono text-sm text-p31-red">&rarr;</span>
               </Link>
             ))}
@@ -108,7 +115,7 @@ export default function Navbar() {
               href="/terminy"
               className="mt-7 bg-p31-red text-white border-none py-5 px-6 font-body text-[13px] font-semibold tracking-[0.18em] uppercase cursor-pointer no-underline text-center"
             >
-              Registrace &rarr;
+              {t('register')} &rarr;
             </Link>
           </div>
         </div>

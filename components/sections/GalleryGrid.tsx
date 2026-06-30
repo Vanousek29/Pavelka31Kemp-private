@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import Lightbox from '@/components/ui/Lightbox';
 import { GALLERY } from '@/lib/constants';
 import type { GalleryItem } from '@/lib/types';
@@ -9,19 +10,23 @@ import type { GalleryItem } from '@/lib/types';
 type Filter = 'all' | 'photos' | 'videos';
 
 export default function GalleryGrid() {
+  const t = useTranslations('gallery');
   const [filter, setFilter] = useState<Filter>('all');
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
+  // Doplníme přeložený popisek (alt / lightbox) z překladů podle id
+  const items: GalleryItem[] = GALLERY.map((g) => ({ ...g, label: t(`labels.${g.id}`) }));
+
   const filtered: GalleryItem[] = filter === 'photos'
-    ? GALLERY.filter((g) => !g.isVideo)
+    ? items.filter((g) => !g.isVideo)
     : filter === 'videos'
-      ? GALLERY.filter((g) => g.isVideo)
-      : GALLERY;
+      ? items.filter((g) => g.isVideo)
+      : items;
 
   const filters: { key: Filter; label: string; count: number }[] = [
-    { key: 'all', label: 'Vše', count: GALLERY.length },
-    { key: 'photos', label: 'Fotky', count: GALLERY.filter((g) => !g.isVideo).length },
-    { key: 'videos', label: 'Videa', count: GALLERY.filter((g) => g.isVideo).length },
+    { key: 'all', label: t('filterAll'), count: GALLERY.length },
+    { key: 'photos', label: t('filterPhotos'), count: GALLERY.filter((g) => !g.isVideo).length },
+    { key: 'videos', label: t('filterVideos'), count: GALLERY.filter((g) => g.isVideo).length },
   ];
 
   return (
@@ -72,13 +77,13 @@ export default function GalleryGrid() {
                     </div>
                   </div>
                   <div className="absolute top-3 right-3 px-2 py-1 bg-[rgba(10,10,10,0.7)] backdrop-blur-[4px] font-mono text-[9px] text-white tracking-[0.2em] uppercase">
-                    Video
+                    {t('videoBadge')}
                   </div>
                 </>
               ) : (
                 <Image
                   src={g.src}
-                  alt={g.label}
+                  alt={g.label ?? ''}
                   fill
                   className="object-cover"
                   sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 25vw"

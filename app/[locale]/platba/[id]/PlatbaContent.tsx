@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import QRPayment from '@/components/QRPayment';
 import type { StoredRegistration } from '@/lib/types';
 
@@ -18,6 +19,7 @@ interface PlatbaContentProps {
 }
 
 export default function PlatbaContent({ id }: PlatbaContentProps) {
+  const t = useTranslations('platba');
   const [registration, setRegistration] = useState<StoredRegistration | null>(null);
 
   useEffect(() => {
@@ -37,17 +39,17 @@ export default function PlatbaContent({ id }: PlatbaContentProps) {
         {/* Status badge */}
         <div className="inline-flex items-center gap-2.5 px-3.5 py-2 bg-[rgba(60,180,100,0.1)] border border-[rgba(60,180,100,0.3)] mb-8">
           <span className="w-1.5 h-1.5 bg-[#4ade80] rounded-full" />
-          <span className="font-mono text-[10px] tracking-[0.3em] text-[#4ade80] uppercase">Registrace přijata · VS {id}</span>
+          <span className="font-mono text-[10px] tracking-[0.3em] text-[#4ade80] uppercase">{t('badge', { vs: id })}</span>
         </div>
 
         <h1
           className="font-heading leading-[0.9] tracking-[0.005em] m-0 mb-6 text-white font-normal"
           style={{ fontSize: 'clamp(56px, 8vw, 120px)' }}
         >
-          Zaplať a máš<br /><span className="text-p31-red">místo</span>
+          {t('titleLine1')}<br /><span className="text-p31-red">{t('titleHighlight')}</span>
         </h1>
         <p className="text-[17px] leading-[1.6] text-p31-muted max-w-[600px] m-0 mb-16">
-          Naskenuj QR kód v bankovní aplikaci nebo zadej údaje ručně. Platbu očekáváme do <strong className="text-white">7 dní</strong>, jinak místo uvolníme.
+          {t.rich('intro', { b: (chunks) => <strong className="text-white">{chunks}</strong> })}
         </p>
 
         <QRPayment vs={id} registration={registration} />
@@ -57,7 +59,7 @@ export default function PlatbaContent({ id }: PlatbaContentProps) {
             href="/"
             className="text-p31-muted font-body text-[12px] font-medium tracking-[0.18em] uppercase no-underline hover:text-white transition-colors"
           >
-            &larr; Zpět na úvod
+            &larr; {t('back')}
           </Link>
         </div>
       </div>

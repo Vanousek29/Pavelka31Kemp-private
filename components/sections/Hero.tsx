@@ -1,7 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 
 const reveal = {
   initial: { opacity: 0, y: 24 },
@@ -10,7 +11,11 @@ const reveal = {
   transition: { duration: 0.7, ease: [0.2, 0.6, 0.2, 1] as const },
 };
 
+type HeroStat = { value: string; label: string };
+
 export default function Hero() {
+  const t = useTranslations('hero');
+  const stats = t.raw('stats') as HeroStat[];
   const scrollToAbout = () => {
     const el = document.getElementById('about-section');
     if (el) window.scrollTo({ top: el.offsetTop - 60, behavior: 'smooth' });
@@ -37,7 +42,7 @@ export default function Hero() {
         {/* Badge */}
         <div className="inline-flex items-center gap-2.5 px-3.5 py-2 border border-p31-border-light bg-[rgba(255,255,255,0.02)] backdrop-blur-[8px] mb-8">
           <span className="w-1.5 h-1.5 bg-p31-red rounded-full animate-p31-pulse" />
-          <span className="font-mono text-[10px] tracking-[0.3em] text-p31-muted uppercase">Kapka resort Vsetín · 26.--27. 6. 2026</span>
+          <span className="font-mono text-[10px] tracking-[0.3em] text-p31-muted uppercase">{t('badge')}</span>
         </div>
 
         {/* Title */}
@@ -54,7 +59,7 @@ export default function Hero() {
 
         {/* Subtitle */}
         <p className="max-w-[640px] mx-auto mt-9 text-lg leading-[1.55] text-p31-muted">
-          Brankářský kemp Jaroslava Pavelky v Kapka resortu Vsetín. Led, suchá příprava, video analýza a trénink se špičkovými trenéry.
+          {t('subtitle')}
         </p>
 
         {/* CTAs */}
@@ -63,25 +68,20 @@ export default function Hero() {
             href="/terminy"
             className="bg-p31-red text-white border-none px-8 py-[18px] font-body text-[13px] font-semibold tracking-[0.18em] uppercase no-underline transition-all duration-300 inline-flex items-center gap-3 hover:bg-p31-red-hover hover:shadow-[0_0_40px_rgba(206,17,38,0.5)] hover:-translate-y-0.5"
           >
-            Registrace
+            {t('ctaRegister')}
             <span className="font-mono">&rarr;</span>
           </Link>
           <button
             onClick={scrollToAbout}
             className="bg-transparent text-white border border-[rgba(255,255,255,0.2)] px-8 py-[18px] font-body text-[13px] font-semibold tracking-[0.18em] uppercase cursor-pointer transition-all duration-300 hover:border-white hover:bg-[rgba(255,255,255,0.04)]"
           >
-            Více info
+            {t('ctaMoreInfo')}
           </button>
         </div>
 
         {/* Stats */}
         <div className="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-px bg-p31-border border border-p31-border max-w-[720px] mx-auto">
-          {[
-            { value: '15+', label: 'Let profi kariéry' },
-            { value: '90+', label: 'Startů v ELH' },
-            { value: '3x', label: 'Medaile ELH / Maxa' },
-            { value: 'U18', label: 'Reprezentace ČR' },
-          ].map((stat) => (
+          {stats.map((stat) => (
             <div key={stat.label} className="bg-p31-bg py-[18px] px-3">
               <div className="font-heading text-[32px] text-p31-red leading-none">{stat.value}</div>
               <div className="font-mono text-[10px] text-p31-muted tracking-[0.2em] uppercase mt-1.5">{stat.label}</div>

@@ -1,10 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
-import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { useRouter, Link } from '@/i18n/navigation';
 import Modal from './ui/Modal';
-import { TIERS, EVENT } from '@/lib/constants';
+import { TIERS } from '@/lib/constants';
 import { generateVS } from '@/lib/utils';
 import type { Registration } from '@/lib/types';
 
@@ -30,6 +30,9 @@ const emptyForm: Registration = {
 };
 
 export default function RegistrationForm({ open, onClose, defaultRole = '' }: RegistrationFormProps) {
+  const t = useTranslations('form');
+  const tt = useTranslations('terminy');
+  const te = useTranslations('event');
   const router = useRouter();
   const [form, setForm] = useState<Registration>({ ...emptyForm, role: defaultRole });
 
@@ -37,7 +40,8 @@ export default function RegistrationForm({ open, onClose, defaultRole = '' }: Re
     setForm((prev) => ({ ...prev, [field]: value }));
   };
 
-  const selectedTier = TIERS.find((t) => t.key === form.role);
+  const selectedTier = TIERS.find((tier) => tier.key === form.role);
+  const roleLabel = (key: string) => tt(`tiers.${key}.role`);
   const isValid = form.role && form.firstName.trim() && form.lastName.trim() && form.birthDate && form.email.trim() && form.phone.trim() && form.agreeRules && form.agreeGdpr;
 
   const handleSubmit = () => {
@@ -46,7 +50,7 @@ export default function RegistrationForm({ open, onClose, defaultRole = '' }: Re
     const data = {
       ...form,
       vs,
-      typUcasti: selectedTier.role,
+      typUcasti: roleLabel(selectedTier.key),
       cena: selectedTier.priceCzk,
       timestamp: new Date().toISOString(),
     };
@@ -60,14 +64,14 @@ export default function RegistrationForm({ open, onClose, defaultRole = '' }: Re
       {/* Header */}
       <div className="px-6 md:px-10 py-8 border-b border-p31-border flex items-start justify-between gap-6">
         <div>
-          <div className="font-mono text-[10px] text-p31-red tracking-[0.3em] uppercase mb-2.5">Registrace</div>
-          <div className="font-heading text-[34px] text-white tracking-[0.02em] leading-none">{EVENT.title}</div>
-          <div className="font-mono text-[11px] text-p31-muted tracking-[0.15em] uppercase mt-2">{EVENT.place} · {EVENT.dateRange}</div>
+          <div className="font-mono text-[10px] text-p31-red tracking-[0.3em] uppercase mb-2.5">{t('label')}</div>
+          <div className="font-heading text-[34px] text-white tracking-[0.02em] leading-none">{te('title')}</div>
+          <div className="font-mono text-[11px] text-p31-muted tracking-[0.15em] uppercase mt-2">{te('place')} · {te('datesSummary')}</div>
         </div>
         <button
           onClick={onClose}
           className="w-9 h-9 bg-transparent border border-p31-border-lighter text-white cursor-pointer font-mono text-base transition-all hover:border-p31-red hover:text-p31-red flex-shrink-0 flex items-center justify-center"
-          aria-label="Zavřít"
+          aria-label={t('close')}
         >
           &times;
         </button>
@@ -77,16 +81,16 @@ export default function RegistrationForm({ open, onClose, defaultRole = '' }: Re
       <div className="px-6 md:px-10 py-8">
         {/* Typ účasti */}
         <div className="mb-6">
-          <div className="font-mono text-[10px] text-p31-muted tracking-[0.2em] uppercase mb-2.5">Typ účasti <span className="text-p31-red">*</span></div>
+          <div className="font-mono text-[10px] text-p31-muted tracking-[0.2em] uppercase mb-2.5">{t('participationType')} <span className="text-p31-red">*</span></div>
           <select
             value={form.role}
             onChange={(e) => set('role', e.target.value)}
             className="w-full bg-p31-bg border border-p31-border-light text-white px-3.5 py-3 font-body text-sm outline-none"
           >
-            <option value="">Vyber typ účasti...</option>
-            {TIERS.map((t) => (
-              <option key={t.key} value={t.key}>
-                {t.role} ({t.price})
+            <option value="">{t('selectType')}</option>
+            {TIERS.filter((tier) => !tier.contact).map((tier) => (
+              <option key={tier.key} value={tier.key}>
+                {roleLabel(tier.key)} ({tier.price})
               </option>
             ))}
           </select>
@@ -95,29 +99,29 @@ export default function RegistrationForm({ open, onClose, defaultRole = '' }: Re
         {selectedTier && (
           <div className="mb-6 text-center">
             <span className="font-heading text-[28px] text-p31-red tracking-[0.02em]">
-              Celková cena: {selectedTier.priceCzk.toLocaleString('cs-CZ')} Kč
+              {t('totalPrice', { amount: selectedTier.priceCzk.toLocaleString('cs-CZ') })}
             </span>
           </div>
         )}
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <InputField label="Jméno" required value={form.firstName} onChange={(v) => set('firstName', v)} placeholder="Tomáš" />
-          <InputField label="Příjmení" required value={form.lastName} onChange={(v) => set('lastName', v)} placeholder="Novák" />
+          <InputField label={t('firstName')} required value={form.firstName} onChange={(v) => set('firstName', v)} placeholder={t('placeholderFirstName')} />
+          <InputField label={t('lastName')} required value={form.lastName} onChange={(v) => set('lastName', v)} placeholder={t('placeholderLastName')} />
           <div className="sm:col-span-2">
-            <InputField label="Datum narození" required value={form.birthDate} onChange={(v) => set('birthDate', v)} type="date" />
+            <InputField label={t('birthDate')} required value={form.birthDate} onChange={(v) => set('birthDate', v)} type="date" />
           </div>
-          <InputField label="E-mail" required value={form.email} onChange={(v) => set('email', v)} type="email" placeholder="jana@email.cz" />
-          <InputField label="Telefon" required value={form.phone} onChange={(v) => set('phone', v)} type="tel" placeholder="+420 ..." />
-          <InputField label="Jméno rodiče" value={form.parentName} onChange={(v) => set('parentName', v)} placeholder="Jana Nováková" />
-          <InputField label="Telefon na rodiče" value={form.parentPhone} onChange={(v) => set('parentPhone', v)} type="tel" placeholder="+420 ..." />
+          <InputField label={t('email')} required value={form.email} onChange={(v) => set('email', v)} type="email" placeholder={t('placeholderEmail')} />
+          <InputField label={t('phone')} required value={form.phone} onChange={(v) => set('phone', v)} type="tel" placeholder={t('placeholderPhone')} />
+          <InputField label={t('parentName')} value={form.parentName} onChange={(v) => set('parentName', v)} placeholder={t('placeholderParentName')} />
+          <InputField label={t('parentPhone')} value={form.parentPhone} onChange={(v) => set('parentPhone', v)} type="tel" placeholder={t('placeholderPhone')} />
           <div className="sm:col-span-2">
-            <div className="font-mono text-[10px] text-p31-muted tracking-[0.2em] uppercase mb-2">Velikost dresu</div>
+            <div className="font-mono text-[10px] text-p31-muted tracking-[0.2em] uppercase mb-2">{t('dressSize')}</div>
             <select
               value={form.dressSize}
               onChange={(e) => set('dressSize', e.target.value)}
               className="w-full bg-p31-bg border border-p31-border-light text-white px-3.5 py-3 font-body text-sm outline-none"
             >
-              <option value="">Vyber velikost...</option>
+              <option value="">{t('selectSize')}</option>
               <option value="S">S</option>
               <option value="M">M</option>
               <option value="L">L</option>
@@ -126,12 +130,12 @@ export default function RegistrationForm({ open, onClose, defaultRole = '' }: Re
             </select>
           </div>
           <div className="sm:col-span-2">
-            <div className="font-mono text-[10px] text-p31-muted tracking-[0.2em] uppercase mb-2">Poznámka / zdravotní omezení</div>
+            <div className="font-mono text-[10px] text-p31-muted tracking-[0.2em] uppercase mb-2">{t('note')}</div>
             <textarea
               rows={3}
               value={form.note}
               onChange={(e) => set('note', e.target.value)}
-              placeholder="Alergie, zdravotní omezení, požadavky…"
+              placeholder={t('notePlaceholder')}
               className="w-full bg-p31-bg border border-p31-border-light text-white px-3.5 py-3 font-body text-sm outline-none resize-y"
             />
           </div>
@@ -147,8 +151,11 @@ export default function RegistrationForm({ open, onClose, defaultRole = '' }: Re
               className="mt-0.5 accent-p31-red"
             />
             <span className="text-[13px] text-p31-muted leading-[1.5]">
-              Souhlasím s{' '}
-              <Link href="/pravidla" className="text-p31-red underline" target="_blank">pravidly kempu</Link>
+              {t.rich('agreeRules', {
+                link: (chunks) => (
+                  <Link href="/pravidla" className="text-p31-red underline" target="_blank">{chunks}</Link>
+                ),
+              })}
               {' '}<span className="text-p31-red">*</span>
             </span>
           </label>
@@ -160,7 +167,7 @@ export default function RegistrationForm({ open, onClose, defaultRole = '' }: Re
               className="mt-0.5 accent-p31-red"
             />
             <span className="text-[13px] text-p31-muted leading-[1.5]">
-              Souhlasím se zpracováním osobních údajů podle GDPR <span className="text-p31-red">*</span>
+              {t('agreeGdpr')} <span className="text-p31-red">*</span>
             </span>
           </label>
         </div>
@@ -169,7 +176,7 @@ export default function RegistrationForm({ open, onClose, defaultRole = '' }: Re
       {/* Footer */}
       <div className="px-6 md:px-10 py-6 border-t border-p31-border flex justify-between items-center gap-4 flex-wrap bg-[#0F0F0F]">
         <div>
-          <div className="font-mono text-[10px] text-p31-muted tracking-[0.2em] uppercase">K platbě</div>
+          <div className="font-mono text-[10px] text-p31-muted tracking-[0.2em] uppercase">{t('toPay')}</div>
           <div className="font-heading text-[32px] text-white tracking-[0.02em] leading-none">{selectedTier ? selectedTier.price : '--'}</div>
         </div>
         <div className="flex gap-2">
@@ -177,7 +184,7 @@ export default function RegistrationForm({ open, onClose, defaultRole = '' }: Re
             onClick={onClose}
             className="bg-transparent border border-p31-border-lighter text-white px-[22px] py-3.5 font-body text-[12px] font-semibold tracking-[0.18em] uppercase cursor-pointer hover:border-white transition-colors"
           >
-            Zrušit
+            {t('cancel')}
           </button>
           <button
             onClick={handleSubmit}
@@ -189,7 +196,7 @@ export default function RegistrationForm({ open, onClose, defaultRole = '' }: Re
               opacity: isValid ? 1 : 0.6,
             }}
           >
-            Pokračovat k platbě &rarr;
+            {t('continueToPayment')} &rarr;
           </button>
         </div>
       </div>

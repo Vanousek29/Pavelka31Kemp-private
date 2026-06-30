@@ -1,0 +1,341 @@
+{
+  "meta": {
+    "home": {
+      "title": "Pavelka 31 Kemp | Jaroslav Pavelka's Goalie Camp",
+      "description": "An ice hockey goalie camp for young goaltenders. On-ice training, dryland and video analysis.",
+      "ogTitle": "Pavelka 31 Kemp",
+      "ogDescription": "Jaroslav Pavelka's goalie camp"
+    },
+    "terminy": {
+      "title": "Dates & registration | Pavelka 31 Kemp",
+      "description": "Dates for the Pavelka 31 goalie camp. Registration, program and pricing."
+    },
+    "pravidla": {
+      "title": "Camp rules | Pavelka 31 Kemp",
+      "description": "Rules of the Pavelka 31 goalie camp. General rules, required equipment, cancellation terms."
+    },
+    "galerie": {
+      "title": "Gallery | Pavelka 31 Kemp",
+      "description": "Photos and videos from the Pavelka 31 goalie camp."
+    },
+    "treneri": {
+      "title": "Coaches & partners | Pavelka 31 Kemp",
+      "description": "The coaching team of the Pavelka 31 goalie camp and the camp's partners."
+    },
+    "kontakt": {
+      "title": "Contact | Pavelka 31 Kemp",
+      "description": "Contact details for the Pavelka 31 goalie camp."
+    },
+    "merch": {
+      "title": "Merch | Pavelka 31 Kemp",
+      "description": "Official merch of the Pavelka 31 goalie camp. Coming soon."
+    },
+    "platba": {
+      "title": "Payment | Pavelka 31 Kemp",
+      "description": "Payment details for the Pavelka 31 camp."
+    }
+  },
+  "nav": {
+    "brandTag": "GOALIE CAMP",
+    "items": {
+      "home": "Home",
+      "terminy": "Dates",
+      "pravidla": "Rules",
+      "galerie": "Gallery",
+      "treneri": "Coaches",
+      "kontakt": "Contact"
+    },
+    "register": "Register",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "langSwitcher": {
+    "label": "Language"
+  },
+  "hero": {
+    "badge": "Kapka resort Vsetín · Jul 18–19 + Aug 7–8, 2026",
+    "subtitle": "Jaroslav Pavelka's goalie camp at Kapka resort Vsetín. Ice, dryland, video analysis and training with top coaches.",
+    "ctaRegister": "Register",
+    "ctaMoreInfo": "More info",
+    "stats": [
+      { "value": "15+", "label": "Years pro career" },
+      { "value": "90+", "label": "ELH appearances" },
+      { "value": "3x", "label": "ELH / Maxa medals" },
+      { "value": "U18", "label": "Czech national team" }
+    ]
+  },
+  "about": {
+    "sectionLabel": "01 / Coach",
+    "headingLine1": "You're not born",
+    "headingLine2": "a goalie.",
+    "headingLine3": "You become one.",
+    "paragraph1": "Jaroslav Pavelka is a professional goaltender with more than <b>15 years</b> on the ice. He came up through the Canadian OHL juniors (Niagara IceDogs, Windsor Spitfires), represented the Czech Republic from U16 to U18 and has logged over 90 games in the Extraliga.",
+    "paragraph2": "At the camp he passes on what he has spent years refining at the highest level – from technique to reading the game.",
+    "currentLabel": "Currently",
+    "quote": "When I was starting out, I didn't have a coach who fully focused on goalies. <red>Pavelka 31 Kemp is the answer.</red>",
+    "quoteAuthor": "Jaroslav Pavelka",
+    "cardLabel": "Career profile",
+    "goalieRole": "Goaltender · Goalie",
+    "chips": ["Czech national team", "Tipsport ELH", "OHL · Canada"],
+    "clubDetails": ["Contract until 2028", "Still an active player"],
+    "achievements": [
+      { "kind": "Award", "title": "Hardest Working Player", "detail": "Dickies · OHL Player of the Year" },
+      { "kind": "Overseas · OHL", "title": "Niagara IceDogs · Windsor Spitfires", "detail": "Canadian juniors (OHL)" },
+      { "kind": "National team", "title": "Czech U16 · U17 · U18", "detail": "Youth national teams" },
+      { "kind": "International", "title": "Champions League (CHL)", "detail": "Mountfield HK · HC Škoda Plzeň" },
+      { "kind": "International", "title": "Spengler Cup", "detail": "Mountfield HK" },
+      { "kind": "ELH silver", "title": "2020 / 21", "detail": "Bílí Tygři Liberec" },
+      { "kind": "ELH bronze", "title": "2016 / 17", "detail": "Mountfield HK" },
+      { "kind": "Silver", "title": "Maxa liga", "detail": "Silver medal" },
+      { "kind": "Stat", "title": "90+ games", "detail": "Tipsport Extraliga" },
+      { "kind": "Stat", "title": "200+ games", "detail": "Maxa liga / Chance liga" },
+      { "kind": "Career", "title": "15+ years", "detail": "Professional career" }
+    ],
+    "mottoIceLabel": "Motto on the ice",
+    "mottoIce": "Humility. Respect. Hard work. Every single day.",
+    "mottoLifeLabel": "Life motto",
+    "mottoLife": "Work hard, eat with good people, and love one woman.",
+    "mottoAuthor": "Jaroslav Pavelka"
+  },
+  "features": {
+    "sectionLabel": "02 / Program",
+    "headingPre": "What the camp",
+    "headingHighlight": "offers",
+    "offerings": [
+      { "title": "Ice & dryland", "desc": "Two days of training – on-ice and off-ice blocks for maximum progress." },
+      { "title": "Video analysis", "desc": "A shared breakdown and feedback after training. You see what you missed." },
+      { "title": "Top coaching team", "desc": "Goalies, defensemen and forwards train separately with specialists." },
+      { "title": "Facilities & gift", "desc": "Fruit and water available, a cool-down, coffee and a small gift for everyone." }
+    ]
+  },
+  "campPreview": {
+    "sectionLabel": "03 / Dates",
+    "headingPre": "Upcoming",
+    "headingHighlight": "camp",
+    "detailButton": "Details & program",
+    "badge": "Next date",
+    "dateBig": "Jul",
+    "dateMonth": "18–19",
+    "dateSub": "Summer 2026",
+    "secondDate": "+ 2nd session · Aug 7–8",
+    "placePre": "Kapka resort",
+    "placeHighlight": "Vsetín",
+    "description": "Two days of intensive training on and off the ice – ice, dryland and video analysis with top coaches.",
+    "ctaRegister": "Register",
+    "ctaProgram": "Camp program"
+  },
+  "cta": {
+    "label": "Join in",
+    "headingLine1": "Two days.",
+    "headingLine2": "Ice and dryland.",
+    "headingLine3": "No excuses.",
+    "description": "Capacity is limited. Reserve your category early – spots go fast.",
+    "button": "Choose a date"
+  },
+  "footer": {
+    "tagline": "Jaroslav Pavelka's goalie camp. Kapka resort Vsetín · Jul 18–19 & Aug 7–8, 2026.",
+    "campTitle": "Camp",
+    "teamTitle": "Team",
+    "followTitle": "Follow",
+    "ariaInstagram": "Instagram",
+    "ariaEmail": "Email",
+    "copyright": "© 2026 Pavelka 31 Kemp · All rights reserved",
+    "rightTag": "Goalie camp · CZE"
+  },
+  "terminy": {
+    "sectionLabel": "2026 season · Registration open",
+    "titleLine1": "Camp",
+    "titleHighlight": "Kapka resort",
+    "intro": "Two days of intensive training on and off the ice. Pick your category and reserve your spot.",
+    "programLabel": "Camp program",
+    "legendIce": "Ice",
+    "legendDry": "Dryland",
+    "legendVideo": "Video / other",
+    "guestsLabel": "Guest coaches",
+    "priceLabel": "Pricing · Sign up",
+    "signupButton": "Sign up",
+    "includedLabel": "Included in the price",
+    "priceOnRequest": "Price on request",
+    "individualCta": "Arrange a session",
+    "individualLabel": "Individual training",
+    "individualText": "Beyond the camp we also offer one-on-one individual sessions by arrangement. Get in touch and we'll set up a date and price.",
+    "tiers": {
+      "brankar_1den": { "role": "Goalie – 1 day", "desc": "Full program – ice, dryland and video analysis. One day." },
+      "brankar_2dny": { "role": "Goalie – 2 days", "desc": "Full program – ice, dryland and video analysis. Both days." },
+      "hrac_1den": { "role": "Skater – 1 day", "desc": "Skills training and shooting with the coaches. One day." },
+      "hrac_2dny": { "role": "Skater – 2 days", "desc": "Skills training and shooting with the coaches. Both days." },
+      "strelec": { "role": "Shooter – shooting on goal only", "desc": "Shooting on the goalies only (on ice)." },
+      "individual": { "role": "Individual training", "desc": "One-on-one sessions by arrangement. Date and price as agreed." }
+    }
+  },
+  "event": {
+    "title": "Kapka resort Camp",
+    "place": "Kapka resort, Vsetín",
+    "datesSummary": "Jul 18–19 & Aug 7–8, 2026",
+    "termsLabel": "Sessions",
+    "terms": {
+      "jul": { "label": "1st session", "dateFull": "Jul 18–19, 2026" },
+      "aug": { "label": "2nd session", "dateFull": "Aug 7–8, 2026" }
+    },
+    "days": {
+      "d1": {
+        "label": "Day 1",
+        "sraz": "Arrival 14:45",
+        "blocks": ["On-ice training", "Dryland training", "Video analysis + coffee"],
+        "note": "Optional group dinner (everyone pays their own). Fruit and water available."
+      },
+      "d2": {
+        "label": "Day 2",
+        "sraz": "Arrival 9:00",
+        "blocks": ["Dryland training", "On-ice training"],
+        "note": "Cool-down after training, video and free coffee / water. Everyone gets a small gift."
+      }
+    },
+    "guestRoles": ["Guest coach · skaters", "Guest coach · goalies", "Goalie camp · day 2"],
+    "included": ["Fruit and water available", "Post-training video analysis", "Cool-down after sessions", "Free coffee / water", "A small gift for everyone"]
+  },
+  "form": {
+    "label": "Registration",
+    "close": "Close",
+    "participationType": "Participation type",
+    "selectType": "Select participation type...",
+    "totalPrice": "Total price: {amount} CZK",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "birthDate": "Date of birth",
+    "email": "Email",
+    "phone": "Phone",
+    "parentName": "Parent's name",
+    "parentPhone": "Parent's phone",
+    "dressSize": "Jersey size",
+    "selectSize": "Select size...",
+    "note": "Note / medical restrictions",
+    "notePlaceholder": "Allergies, medical restrictions, requests…",
+    "placeholderFirstName": "Tomáš",
+    "placeholderLastName": "Novák",
+    "placeholderEmail": "jana@email.cz",
+    "placeholderParentName": "Jana Nováková",
+    "placeholderPhone": "+420 ...",
+    "agreeRules": "I agree with the <link>camp rules</link>",
+    "agreeGdpr": "I agree to the processing of personal data under GDPR",
+    "toPay": "To pay",
+    "cancel": "Cancel",
+    "continueToPayment": "Continue to payment"
+  },
+  "pravidla": {
+    "sectionLabel": "Documents",
+    "titleLine1": "Camp",
+    "titleHighlight": "rules",
+    "intro": "Read all 6 sections. By registering you agree to them.",
+    "rules": [
+      { "num": "01", "title": "General camp rules", "body": "Open to ages 8 and up; a parent / legal guardian signs the participation agreement. Training follows the daily schedule, which you'll receive by email 14 days before the camp. Arrive 30 minutes before the first session and leave after the video analysis. Supervision is provided throughout the camp. Participants follow the coaching team's instructions and behave considerately toward others." },
+      { "num": "02", "title": "Required equipment", "body": "Complete goalie gear in good working condition (a helmet with a functional cage is mandatory!), 2× stick, 2× shirt, towel, water bottle (min. 1 L), a snack for each day, toiletries. We recommend bringing your own mask. A drying room is available at the arena, but a second set of gear helps. Stick tape, electrical tape and minor repairs are on us." },
+      { "num": "03", "title": "Cancellation terms", "body": "Cancellation more than 30 days before the camp starts: 100% refund with no cancellation fee. 30–14 days: 50% of the paid amount refunded. Less than 14 days: no refund, but you may find your own replacement (same age category). For medical reasons with a doctor's note we refund 80% regardless of the cancellation date." },
+      { "num": "04", "title": "Medical fitness", "body": "On arrival, the parent / legal guardian submits a signed declaration of the child's medical fitness (we'll send the form by email). List all allergies, chronic conditions and any medication taken. Participation is not possible with an acute illness (fever, infection). A medic is available at the camp; more serious injuries are handled with the parent and the local emergency service." },
+      { "num": "05", "title": "GDPR and photo consent", "body": "By registering you consent to the processing of personal data for the purpose of organizing the camp, keeping participant records, payments and communication. You agree to photographs and video being taken during training and used in the camp's promotional materials (website, Instagram, Facebook). You can decline photography in the note field during registration. Consent can be withdrawn at any time by email at info@pavelka31kemp.cz." },
+      { "num": "06", "title": "Insurance", "body": "The camp carries third-party liability insurance. Participants must have their own health insurance (insurance card) and we recommend accident insurance. Damage to gear entrusted by the arena is the responsibility of the parent / legal guardian. The camp is not liable for personal belongings lost in the changing room." }
+    ]
+  },
+  "gallery": {
+    "sectionLabel": "Gallery · from the ice",
+    "titleLine1": "Photos",
+    "titleHighlight": "& video",
+    "intro": "Shots from previous years. Click a tile for details.",
+    "filterAll": "All",
+    "filterPhotos": "Photos",
+    "filterVideos": "Videos",
+    "videoBadge": "Video",
+    "close": "Close",
+    "prev": "Previous",
+    "next": "Next",
+    "labels": {
+      "1": "Team camp",
+      "2": "On the ice",
+      "3": "With the kids",
+      "4": "Gameday",
+      "5": "Reflexes",
+      "6": "Tiger card",
+      "7": "From training",
+      "8": "Warm-up",
+      "9": "Save",
+      "10": "On the ice II",
+      "11": "Training"
+    }
+  },
+  "trainers": {
+    "partnersLabel": "Camp partners",
+    "byTag": {
+      "JP31": { "name": "Jaroslav Pavelka", "role": "Goalies" },
+      "OBR": { "name": "Vítek Benda", "role": "Defensemen · camp" },
+      "ÚT": { "name": "Stanislav Sadovikov", "role": "Forwards · skills" },
+      "STŘ": { "name": "Shooters", "role": "Juniors · Morava juniors" }
+    }
+  },
+  "treneri": {
+    "sectionLabel": "Team · Kapka resort",
+    "titleLine1": "Coaches",
+    "titleHighlight": "& partners",
+    "intro": "Each category has its own specialist. Goalies, defensemen and forwards train separately."
+  },
+  "kontakt": {
+    "sectionLabel": "Contact",
+    "titleLine1": "Write",
+    "titleHighlight": "to us",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "instagramLabel": "Instagram",
+    "operatorLabel": "Operator",
+    "address": "Lhota u Vsetína 307, 755 01 Lhota u Vsetína",
+    "mapLabel": "Where to find us",
+    "mapTitle": "Map – Lhota u Vsetína 307",
+    "formLabel": "Send a message",
+    "nameLabel": "Name",
+    "messageLabel": "Message",
+    "send": "Send message",
+    "sent": "Sent ✓"
+  },
+  "merch": {
+    "sectionLabel": "Merch · Coming soon",
+    "titleLine1": "Merch",
+    "titleHighlight": "Pavelka 31",
+    "intro": "Official merch is on the way. Leave us your email and be the first to know.",
+    "emailPlaceholder": "your@email.com",
+    "subscribe": "Subscribe",
+    "subscribed": "Sent ✓",
+    "preparingLabel": "In the works",
+    "comingSoon": "Coming soon",
+    "products": {
+      "1": { "category": "Apparel", "name": "P31 Black T-Shirt" },
+      "2": { "category": "Apparel", "name": "Goalie Crew Hoodie" },
+      "3": { "category": "Accessories", "name": "31 Cap" },
+      "4": { "category": "Apparel", "name": "Insulated Vest" },
+      "5": { "category": "Gear", "name": "P31 Bag" },
+      "6": { "category": "Accessories", "name": "Club 31 Scarf" }
+    }
+  },
+  "platba": {
+    "badge": "Registration received · VS {vs}",
+    "titleLine1": "Pay and secure",
+    "titleHighlight": "your spot",
+    "intro": "Scan the QR code in your banking app or enter the details manually. We expect payment within <b>7 days</b>, otherwise the spot is released.",
+    "back": "Back to home"
+  },
+  "payment": {
+    "summaryType": "Participation type",
+    "summaryName": "Name",
+    "summaryAccount": "Account number",
+    "spaydLabel": "SPAYD · CZK",
+    "transferLabel": "Bank transfer",
+    "rowAmount": "Amount",
+    "rowAccount": "Account number",
+    "rowIban": "IBAN",
+    "rowVs": "Variable symbol",
+    "rowMessage": "Message for recipient",
+    "copyLabel": "Copy payment details",
+    "copied": "Copied ✓",
+    "importantLabel": "Important",
+    "important": "Use the variable symbol <b>{vs}</b> so we can match your payment. Once it arrives we'll send a confirmation by email.",
+    "defaultFirstName": "First name",
+    "defaultLastName": "Last name"
+  }
+}

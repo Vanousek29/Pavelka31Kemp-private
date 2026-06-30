@@ -4,15 +4,17 @@ export function cn(...inputs: ClassValue[]): string {
   return clsx(inputs);
 }
 
-export function formatPrice(amount: number): string {
-  return amount.toLocaleString('cs-CZ') + ' Kc';
+// Ceny zůstávají v CZK v obou jazycích – formátujeme jen oddělovač tisíců.
+export function formatPrice(amount: number, locale: string = 'cs'): string {
+  return amount.toLocaleString(locale === 'cs' ? 'cs-CZ' : 'en-US') + ' Kč';
 }
 
-export function formatDate(dateStr: string): string {
+// CS: 12. 7. 2026 · EN: Jul 12, 2026
+export function formatDate(dateStr: string, locale: string = 'cs'): string {
   const date = new Date(dateStr);
-  return date.toLocaleDateString('cs-CZ', {
+  return date.toLocaleDateString(locale === 'cs' ? 'cs-CZ' : 'en-US', {
     day: 'numeric',
-    month: 'long',
+    month: locale === 'cs' ? 'numeric' : 'short',
     year: 'numeric',
   });
 }

@@ -2,7 +2,8 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { CURRENT_CLUBS, ACHIEVEMENTS, MOTTOS } from '@/lib/constants';
+import { useTranslations } from 'next-intl';
+import { CURRENT_CLUBS, ACHIEVEMENTS } from '@/lib/constants';
 
 const reveal = {
   initial: { opacity: 0, y: 24 },
@@ -11,11 +12,17 @@ const reveal = {
   transition: { duration: 0.7, ease: [0.2, 0.6, 0.2, 1] as const },
 };
 
+type AchievementText = { kind: string; title: string; detail: string };
+
 export default function About() {
-  const isStat = (a: { kind: string }) => a.kind === 'Statistika' || a.kind === 'Kariéra';
-  const vizitkaStats = ACHIEVEMENTS.filter(isStat);
-  const vizitkaTiles = ACHIEVEMENTS.filter((a) => !isStat(a));
-  const vizitkaChips = ['Reprezentace ČR', 'Tipsport ELH', 'OHL · Kanada'];
+  const t = useTranslations('about');
+
+  const achText = t.raw('achievements') as AchievementText[];
+  const combined = ACHIEVEMENTS.map((a, i) => ({ ...a, ...achText[i] }));
+  const vizitkaStats = combined.filter((a) => a.isStat);
+  const vizitkaTiles = combined.filter((a) => !a.isStat);
+  const vizitkaChips = t.raw('chips') as string[];
+  const clubDetails = t.raw('clubDetails') as string[];
 
   return (
     <motion.section
@@ -26,7 +33,7 @@ export default function About() {
       <div className="max-w-[1240px] mx-auto">
         {/* Section label */}
         <div className="flex items-center gap-4 mb-16">
-          <span className="font-mono text-[11px] tracking-[0.3em] text-p31-red uppercase">01 / Trenér</span>
+          <span className="font-mono text-[11px] tracking-[0.3em] text-p31-red uppercase">{t('sectionLabel')}</span>
           <div className="flex-1 h-px bg-[rgba(255,255,255,0.08)]" />
         </div>
 
@@ -50,25 +57,25 @@ export default function About() {
               className="font-heading leading-[0.92] tracking-[0.005em] m-0 mb-8 text-white font-normal"
               style={{ fontSize: 'clamp(48px, 5vw, 84px)' }}
             >
-              Brankářem<br />se nerodíš.<br /><span className="text-p31-red">Stáváš se jím.</span>
+              {t('headingLine1')}<br />{t('headingLine2')}<br /><span className="text-p31-red">{t('headingLine3')}</span>
             </h2>
             <div className="text-base leading-[1.75] text-p31-muted max-w-[480px]">
               <p className="mb-[18px]">
-                Jaroslav Pavelka je profesionální brankář s více než <strong className="text-white">15 lety</strong> na ledě. Prošel kanadskou juniorkou OHL (Niagara IceDogs, Windsor Spitfires), reprezentoval ČR v kategoriích U16 až U18 a v extralize si připsal přes 90 startů.
+                {t.rich('paragraph1', { b: (chunks) => <strong className="text-white">{chunks}</strong> })}
               </p>
               <p>
-                Na kempu předává to, co sám roky piluje na nejvyšší úrovni -- od techniky po čtení hry.
+                {t('paragraph2')}
               </p>
             </div>
 
             {/* Aktualne */}
             <div className="mt-11">
-              <div className="font-mono text-[10px] text-p31-red tracking-[0.3em] uppercase mb-[18px]">Aktuálně</div>
+              <div className="font-mono text-[10px] text-p31-red tracking-[0.3em] uppercase mb-[18px]">{t('currentLabel')}</div>
               <div className="flex flex-col gap-2.5">
-                {CURRENT_CLUBS.map((c) => (
-                  <div key={c.club} className="flex items-baseline justify-between gap-4 px-5 py-4 bg-[rgba(255,255,255,0.02)] border border-p31-border border-l-2 border-l-p31-red">
-                    <span className="font-heading text-[22px] tracking-[0.03em] text-white">{c.club}</span>
-                    <span className="font-mono text-[10px] text-p31-muted tracking-[0.15em] uppercase text-right">{c.detail}</span>
+                {CURRENT_CLUBS.map((club, i) => (
+                  <div key={club} className="flex items-baseline justify-between gap-4 px-5 py-4 bg-[rgba(255,255,255,0.02)] border border-p31-border border-l-2 border-l-p31-red">
+                    <span className="font-heading text-[22px] tracking-[0.03em] text-white">{club}</span>
+                    <span className="font-mono text-[10px] text-p31-muted tracking-[0.15em] uppercase text-right">{clubDetails[i]}</span>
                   </div>
                 ))}
               </div>
@@ -78,9 +85,9 @@ export default function About() {
             <div className="mt-14 py-7 px-8 border-l-2 border-l-p31-red bg-[rgba(206,17,38,0.04)]">
               <div className="font-heading text-[64px] leading-[0.5] text-p31-red opacity-60">&ldquo;</div>
               <p className="mt-[-10px] font-body text-lg leading-[1.55] text-white italic font-light">
-                Když jsem začínal, neměl jsem trenéra, který by se brankářům věnoval naplno. <span className="text-p31-red">Pavelka 31 Kemp je odpověď.</span>
+                {t.rich('quote', { red: (chunks) => <span className="text-p31-red">{chunks}</span> })}
               </p>
-              <div className="mt-4 font-mono text-[10px] text-p31-muted tracking-[0.3em] uppercase">&mdash; Jaroslav Pavelka</div>
+              <div className="mt-4 font-mono text-[10px] text-p31-muted tracking-[0.3em] uppercase">&mdash; {t('quoteAuthor')}</div>
             </div>
           </div>
         </div>
@@ -88,7 +95,7 @@ export default function About() {
         {/* Karierni vizitka */}
         <div className="mt-24">
           <div className="flex items-center gap-4 mb-10">
-            <span className="font-mono text-[11px] tracking-[0.3em] text-p31-red uppercase">Kariérní vizitka</span>
+            <span className="font-mono text-[11px] tracking-[0.3em] text-p31-red uppercase">{t('cardLabel')}</span>
             <div className="flex-1 h-px bg-[rgba(255,255,255,0.08)]" />
           </div>
 
@@ -102,7 +109,7 @@ export default function About() {
                 </div>
                 <div>
                   <div className="font-heading text-[30px] tracking-[0.04em] text-white leading-none">Jaroslav Pavelka</div>
-                  <div className="font-mono text-[10px] tracking-[0.3em] text-p31-muted uppercase mt-2">Brankář · Goalie</div>
+                  <div className="font-mono text-[10px] tracking-[0.3em] text-p31-muted uppercase mt-2">{t('goalieRole')}</div>
                 </div>
               </div>
               <div className="flex gap-2 flex-wrap">
@@ -145,13 +152,13 @@ export default function About() {
           {/* Motto na ledě */}
           <div className="relative bg-[#0f0f0f] border-l-[3px] border-l-p31-red px-7 md:px-10 py-10 md:py-12 flex flex-col">
             <div className="font-mono text-[10px] text-p31-red tracking-[0.3em] uppercase mb-7">
-              Motto na ledě
+              {t('mottoIceLabel')}
             </div>
             <div
               className="font-heading text-white leading-[1.05] tracking-[0.04em] mt-auto"
               style={{ fontSize: 'clamp(40px, 4.4vw, 64px)' }}
             >
-              {MOTTOS.led}
+              {t('mottoIce')}
             </div>
           </div>
 
@@ -165,16 +172,16 @@ export default function About() {
               &rdquo;
             </span>
             <div className="font-mono text-[10px] text-p31-red tracking-[0.3em] uppercase mb-7">
-              Životní motto
+              {t('mottoLifeLabel')}
             </div>
             <p
               className="relative font-body italic text-[#e9e9e9] font-light leading-[1.5]"
               style={{ fontSize: 'clamp(22px, 2.4vw, 28px)' }}
             >
-              {MOTTOS.zivot}
+              {t('mottoLife')}
             </p>
             <div className="mt-auto pt-7 font-mono text-[11px] text-p31-red tracking-[0.3em] uppercase text-right">
-              &mdash; Jaroslav Pavelka
+              &mdash; {t('mottoAuthor')}
             </div>
           </div>
         </div>

@@ -1,0 +1,341 @@
+{
+  "meta": {
+    "home": {
+      "title": "Pavelka 31 Kemp | Brankářský kemp Jaroslava Pavelky",
+      "description": "Hokejový brankářský kemp pro mladé brankáře. Tréninky na ledě, suchá příprava, video analýza.",
+      "ogTitle": "Pavelka 31 Kemp",
+      "ogDescription": "Brankářský kemp Jaroslava Pavelky"
+    },
+    "terminy": {
+      "title": "Termíny a registrace | Pavelka 31 Kemp",
+      "description": "Termíny brankářského kempu Pavelka 31. Registrace, program a ceník."
+    },
+    "pravidla": {
+      "title": "Pravidla kempu | Pavelka 31 Kemp",
+      "description": "Pravidla brankářského kempu Pavelka 31. Obecná pravidla, povinná výbava, storno podmínky."
+    },
+    "galerie": {
+      "title": "Galerie | Pavelka 31 Kemp",
+      "description": "Fotky a videa z brankářského kempu Pavelka 31."
+    },
+    "treneri": {
+      "title": "Trenéři & partneři | Pavelka 31 Kemp",
+      "description": "Trenérský tým brankářského kempu Pavelka 31 a partneři kempu."
+    },
+    "kontakt": {
+      "title": "Kontakt | Pavelka 31 Kemp",
+      "description": "Kontaktní údaje brankářského kempu Pavelka 31."
+    },
+    "merch": {
+      "title": "Merch | Pavelka 31 Kemp",
+      "description": "Oficiální merch brankářského kempu Pavelka 31. Coming soon."
+    },
+    "platba": {
+      "title": "Platba | Pavelka 31 Kemp",
+      "description": "Platební údaje pro kemp Pavelka 31."
+    }
+  },
+  "nav": {
+    "brandTag": "GOALIE CAMP",
+    "items": {
+      "home": "Domů",
+      "terminy": "Termíny",
+      "pravidla": "Pravidla",
+      "galerie": "Galerie",
+      "treneri": "Trenéři",
+      "kontakt": "Kontakt"
+    },
+    "register": "Registrace",
+    "openMenu": "Otevřít menu",
+    "closeMenu": "Zavřít menu"
+  },
+  "langSwitcher": {
+    "label": "Jazyk"
+  },
+  "hero": {
+    "badge": "Kapka resort Vsetín · 18.–19. 7. + 7.–8. 8. 2026",
+    "subtitle": "Brankářský kemp Jaroslava Pavelky v Kapka resortu Vsetín. Led, suchá příprava, video analýza a trénink se špičkovými trenéry.",
+    "ctaRegister": "Registrace",
+    "ctaMoreInfo": "Více info",
+    "stats": [
+      { "value": "15+", "label": "Let profi kariéry" },
+      { "value": "90+", "label": "Startů v ELH" },
+      { "value": "3x", "label": "Medaile ELH / Maxa" },
+      { "value": "U18", "label": "Reprezentace ČR" }
+    ]
+  },
+  "about": {
+    "sectionLabel": "01 / Trenér",
+    "headingLine1": "Brankářem",
+    "headingLine2": "se nerodíš.",
+    "headingLine3": "Stáváš se jím.",
+    "paragraph1": "Jaroslav Pavelka je profesionální brankář s více než <b>15 lety</b> na ledě. Prošel kanadskou juniorkou OHL (Niagara IceDogs, Windsor Spitfires), reprezentoval ČR v kategoriích U16 až U18 a v extralize si připsal přes 90 startů.",
+    "paragraph2": "Na kempu předává to, co sám roky piluje na nejvyšší úrovni – od techniky po čtení hry.",
+    "currentLabel": "Aktuálně",
+    "quote": "Když jsem začínal, neměl jsem trenéra, který by se brankářům věnoval naplno. <red>Pavelka 31 Kemp je odpověď.</red>",
+    "quoteAuthor": "Jaroslav Pavelka",
+    "cardLabel": "Kariérní vizitka",
+    "goalieRole": "Brankář · Goalie",
+    "chips": ["Reprezentace ČR", "Tipsport ELH", "OHL · Kanada"],
+    "clubDetails": ["Smlouva do roku 2028", "Stále aktivní hráč"],
+    "achievements": [
+      { "kind": "Ocenění", "title": "Hardest Working Player", "detail": "Dickies · OHL Player of the Year" },
+      { "kind": "Zámoří · OHL", "title": "Niagara IceDogs · Windsor Spitfires", "detail": "Kanadská juniorka (OHL)" },
+      { "kind": "Reprezentace", "title": "ČR U16 · U17 · U18", "detail": "Mládežnické reprezentace" },
+      { "kind": "Mezinárodní", "title": "Liga mistrů (CHL)", "detail": "Mountfield HK · HC Škoda Plzeň" },
+      { "kind": "Mezinárodní", "title": "Spengler Cup", "detail": "Mountfield HK" },
+      { "kind": "Stříbro ELH", "title": "2020 / 21", "detail": "Bílí Tygři Liberec" },
+      { "kind": "Bronz ELH", "title": "2016 / 17", "detail": "Mountfield HK" },
+      { "kind": "Stříbro", "title": "Maxa liga", "detail": "Stříbrná medaile" },
+      { "kind": "Statistika", "title": "90+ startů", "detail": "Tipsport Extraliga" },
+      { "kind": "Statistika", "title": "200+ startů", "detail": "Maxa liga / Chance liga" },
+      { "kind": "Kariéra", "title": "15+ let", "detail": "Profesionální kariéra" }
+    ],
+    "mottoIceLabel": "Motto na ledě",
+    "mottoIce": "Pokora. Respekt. Práce. Každý den.",
+    "mottoLifeLabel": "Životní motto",
+    "mottoLife": "Tvrdě pracuj, jez s dobrými lidmi a miluj jednu ženu.",
+    "mottoAuthor": "Jaroslav Pavelka"
+  },
+  "features": {
+    "sectionLabel": "02 / Program",
+    "headingPre": "Co kemp",
+    "headingHighlight": "nabízí",
+    "offerings": [
+      { "title": "Led & suchá příprava", "desc": "Dva dny tréninku – ledové i mimoledové bloky pro maximální posun." },
+      { "title": "Video analýza", "desc": "Po tréninku společný rozbor a zpětná vazba. Vidíš, co jsi neviděl." },
+      { "title": "Top trenérský tým", "desc": "Brankáři, obránci i útočníci trénují odděleně se specialisty." },
+      { "title": "Zázemí & dárek", "desc": "Ovoce a voda k dispozici, výklus, káva a malý dárek pro každého." }
+    ]
+  },
+  "campPreview": {
+    "sectionLabel": "03 / Termíny",
+    "headingPre": "Nadcházející",
+    "headingHighlight": "kemp",
+    "detailButton": "Detail & program",
+    "badge": "Nejbližší termín",
+    "dateBig": "18.–19.",
+    "dateMonth": "7.",
+    "dateSub": "Léto 2026",
+    "secondDate": "+ 2. termín · 7.–8. 8.",
+    "placePre": "Kapka resort",
+    "placeHighlight": "Vsetín",
+    "description": "Dva dny intenzivního tréninku na ledě i na suchu – led, suchá příprava a video analýza se špičkovými trenéry.",
+    "ctaRegister": "Registrace",
+    "ctaProgram": "Program kempu"
+  },
+  "cta": {
+    "label": "Připoj se",
+    "headingLine1": "Dva dny.",
+    "headingLine2": "Led i suchá.",
+    "headingLine3": "Žádné výmluvy.",
+    "description": "Kapacita je omezená. Rezervuj si svou kategorii včas – místa mizí rychle.",
+    "button": "Vybrat termín"
+  },
+  "footer": {
+    "tagline": "Brankářský kemp Jaroslava Pavelky. Kapka resort Vsetín · 18.–19. 7. & 7.–8. 8. 2026.",
+    "campTitle": "Kemp",
+    "teamTitle": "Tým",
+    "followTitle": "Sledujte",
+    "ariaInstagram": "Instagram",
+    "ariaEmail": "E-mail",
+    "copyright": "© 2026 Pavelka 31 Kemp · Všechna práva vyhrazena",
+    "rightTag": "Brankářský kemp · CZE"
+  },
+  "terminy": {
+    "sectionLabel": "Sezóna 2026 · Registrace otevřena",
+    "titleLine1": "Kemp",
+    "titleHighlight": "Kapka resort",
+    "intro": "Dva dny intenzivního tréninku na ledě i na suchu. Vyber si kategorii a rezervuj si místo.",
+    "programLabel": "Program kempu",
+    "legendIce": "Led",
+    "legendDry": "Suchá příprava",
+    "legendVideo": "Video / ostatní",
+    "guestsLabel": "Hosté tréninku",
+    "priceLabel": "Ceník · Přihlášení",
+    "signupButton": "Přihlásit se",
+    "includedLabel": "V ceně kempu",
+    "priceOnRequest": "Cena na dotaz",
+    "individualCta": "Domluvit termín",
+    "individualLabel": "Individuální trénink",
+    "individualText": "Kromě kempu nabízíme i individuální tréninky 1‑na‑1 po domluvě. Napiš nám a domluvíme termín i cenu.",
+    "tiers": {
+      "brankar_1den": { "role": "Brankář – 1 den", "desc": "Kompletní program – led, suchá příprava i video analýza. Jeden den." },
+      "brankar_2dny": { "role": "Brankář – 2 dny", "desc": "Kompletní program – led, suchá příprava i video analýza. Oba dny." },
+      "hrac_1den": { "role": "Hráč – 1 den", "desc": "Dovednostní trénink a střelba s trenéry. Jeden den." },
+      "hrac_2dny": { "role": "Hráč – 2 dny", "desc": "Dovednostní trénink a střelba s trenéry. Oba dny." },
+      "strelec": { "role": "Střelec – pouze střelba na branku", "desc": "Jen střelba na brankáře (na ledě)." },
+      "individual": { "role": "Individuální trénink", "desc": "Tréninky 1‑na‑1 po domluvě. Termín i cena dle dohody." }
+    }
+  },
+  "event": {
+    "title": "Kemp Kapka resort",
+    "place": "Kapka resort, Vsetín",
+    "datesSummary": "18.–19. 7. a 7.–8. 8. 2026",
+    "termsLabel": "Termíny",
+    "terms": {
+      "jul": { "label": "1. termín", "dateFull": "18.–19. 7. 2026" },
+      "aug": { "label": "2. termín", "dateFull": "7.–8. 8. 2026" }
+    },
+    "days": {
+      "d1": {
+        "label": "1. den",
+        "sraz": "Sraz 14:45",
+        "blocks": ["Trénink na ledě", "Suchá příprava", "Video analýza + káva"],
+        "note": "Možnost společné večeře (hradí každý sám). Ovoce a voda k dispozici."
+      },
+      "d2": {
+        "label": "2. den",
+        "sraz": "Sraz 9:00",
+        "blocks": ["Suchá příprava", "Trénink na ledě"],
+        "note": "Po tréninku výklus, video a káva / voda zdarma. Každý dostane malý dárek."
+      }
+    },
+    "guestRoles": ["Host tréninku · hráči", "Host tréninku · brankáři", "Brankářský kemp · 2. den"],
+    "included": ["Ovoce a voda k dispozici", "Video analýza po tréninku", "Výklus po zátěži", "Káva / voda zdarma", "Malý dárek pro každého"]
+  },
+  "form": {
+    "label": "Registrace",
+    "close": "Zavřít",
+    "participationType": "Typ účasti",
+    "selectType": "Vyber typ účasti...",
+    "totalPrice": "Celková cena: {amount} Kč",
+    "firstName": "Jméno",
+    "lastName": "Příjmení",
+    "birthDate": "Datum narození",
+    "email": "E-mail",
+    "phone": "Telefon",
+    "parentName": "Jméno rodiče",
+    "parentPhone": "Telefon na rodiče",
+    "dressSize": "Velikost dresu",
+    "selectSize": "Vyber velikost...",
+    "note": "Poznámka / zdravotní omezení",
+    "notePlaceholder": "Alergie, zdravotní omezení, požadavky…",
+    "placeholderFirstName": "Tomáš",
+    "placeholderLastName": "Novák",
+    "placeholderEmail": "jana@email.cz",
+    "placeholderParentName": "Jana Nováková",
+    "placeholderPhone": "+420 ...",
+    "agreeRules": "Souhlasím s <link>pravidly kempu</link>",
+    "agreeGdpr": "Souhlasím se zpracováním osobních údajů podle GDPR",
+    "toPay": "K platbě",
+    "cancel": "Zrušit",
+    "continueToPayment": "Pokračovat k platbě"
+  },
+  "pravidla": {
+    "sectionLabel": "Dokumenty",
+    "titleLine1": "Pravidla",
+    "titleHighlight": "kempu",
+    "intro": "Přečti si všech 6 sekcí. Registrací s nimi souhlasíš.",
+    "rules": [
+      { "num": "01", "title": "Obecná pravidla kempu", "body": "Účast od 8 let, rodič / zákonný zástupce podepisuje účastnickou smlouvu. Tréninky probíhají dle denního harmonogramu, který obdržíš e‑mailem 14 dní před kempem. Příchod 30 min před prvním tréninkem, odchod po video analýze. Po celou dobu kempu zajištěn pedagogický dozor. Účastník respektuje pokyny trenérského týmu a chová se ohleduplně k ostatním." },
+      { "num": "02", "title": "Povinná výbava", "body": "Kompletní brankářská výstroj v dobrém technickém stavu (helma s funkčním krytím povinně!), 2× hokejka, 2× košile, ručník, lahev na pití (min. 1 L), svačina na každý den, hygienické potřeby. Doporučujeme vlastní masku. Sušárna v aréně k dispozici, ale druhá sada výstroje pomůže. Stuha na hokejku, izolepa, drobné opravy zajistíme." },
+      { "num": "03", "title": "Storno podmínky", "body": "Storno více než 30 dní před začátkem kempu: vratka 100 % bez storno poplatku. 30–14 dní: vratka 50 % uhrazené částky. Méně než 14 dní: bez vratky, lze najít vlastního náhradníka (stejná věková kategorie). Při zdravotních důvodech s doložením lékařské zprávy vrátíme 80 % bez ohledu na termín storna." },
+      { "num": "04", "title": "Zdravotní způsobilost", "body": "Rodič / zákonný zástupce při příjezdu odevzdá podepsané prohlášení o zdravotní způsobilosti dítěte (formulář pošleme e‑mailem). Uveď všechny alergie, chronická onemocnění a užívané léky. Při akutním onemocnění (teplota, infekce) účast není možná. Na kempu je k dispozici zdravotník, vážnější zranění řešíme s rodičem a místní záchrannou službou." },
+      { "num": "05", "title": "GDPR a souhlas s focením", "body": "Registrací uděluješ souhlas se zpracováním osobních údajů pro účely organizace kempu, evidence účastníků, plateb a komunikace. Souhlasíš s pořízením fotografií a videozáznamů během tréninků a jejich použitím v propagačních materiálech kempu (web, Instagram, Facebook). Nesouhlas s focením lze uvést v poznámce při registraci. Souhlas lze kdykoliv odvolat e‑mailem na info@pavelka31kemp.cz." },
+      { "num": "06", "title": "Pojištění", "body": "Kemp má sjednanou pojistku odpovědnosti za škodu vůči třetím osobám. Účastník je povinen mít vlastní zdravotní pojištění (kartička pojišťovny) a doporučujeme úrazové pojištění. Škody na svěřené výstroji aréně řeší rodič / zákonný zástupce. Ztráty osobních věcí v šatně kemp nehradí." }
+    ]
+  },
+  "gallery": {
+    "sectionLabel": "Galerie · z ledu",
+    "titleLine1": "Foto",
+    "titleHighlight": "& video",
+    "intro": "Záběry z předchozích ročníků. Klikni na dlaždici pro detail.",
+    "filterAll": "Vše",
+    "filterPhotos": "Fotky",
+    "filterVideos": "Videa",
+    "videoBadge": "Video",
+    "close": "Zavřít",
+    "prev": "Předchozí",
+    "next": "Další",
+    "labels": {
+      "1": "Společný kemp",
+      "2": "Na ledě",
+      "3": "S klukama",
+      "4": "Gameday",
+      "5": "Reflexy",
+      "6": "Tygří karta",
+      "7": "Z tréninku",
+      "8": "Rozcvička",
+      "9": "Zákrok",
+      "10": "Na ledě II",
+      "11": "Trénink"
+    }
+  },
+  "trainers": {
+    "partnersLabel": "Partneři kempu",
+    "byTag": {
+      "JP31": { "name": "Jaroslav Pavelka", "role": "Brankáři" },
+      "OBR": { "name": "Vítek Benda", "role": "Obránci · tábor" },
+      "ÚT": { "name": "Stanislav Sadovikov", "role": "Útočníci · skills" },
+      "STŘ": { "name": "Střelci", "role": "Dorost · juniorka Morava" }
+    }
+  },
+  "treneri": {
+    "sectionLabel": "Tým · Kapka resort",
+    "titleLine1": "Trenéři",
+    "titleHighlight": "& partneři",
+    "intro": "Každá kategorie má svého specialistu. Brankáři, obránci i útočníci trénují odděleně."
+  },
+  "kontakt": {
+    "sectionLabel": "Kontakt",
+    "titleLine1": "Napiš",
+    "titleHighlight": "nám",
+    "emailLabel": "E-mail",
+    "phoneLabel": "Telefon",
+    "instagramLabel": "Instagram",
+    "operatorLabel": "Provozovatel",
+    "address": "Lhota u Vsetína 307, 755 01 Lhota u Vsetína",
+    "mapLabel": "Kde nás najdeš",
+    "mapTitle": "Mapa – Lhota u Vsetína 307",
+    "formLabel": "Napiš zprávu",
+    "nameLabel": "Jméno",
+    "messageLabel": "Zpráva",
+    "send": "Odeslat zprávu",
+    "sent": "Odesláno ✓"
+  },
+  "merch": {
+    "sectionLabel": "Merch · Coming soon",
+    "titleLine1": "Merch",
+    "titleHighlight": "Pavelka 31",
+    "intro": "Oficiální merch je na cestě. Zanech nám e-mail a dozvíš se jako první.",
+    "emailPlaceholder": "tvuj@email.cz",
+    "subscribe": "Odebírat",
+    "subscribed": "Odesláno ✓",
+    "preparingLabel": "Připravujeme",
+    "comingSoon": "Coming soon",
+    "products": {
+      "1": { "category": "Oblečení", "name": "Tričko P31 Black" },
+      "2": { "category": "Oblečení", "name": "Mikina Goalie Crew" },
+      "3": { "category": "Doplňky", "name": "Kšiltovka 31" },
+      "4": { "category": "Oblečení", "name": "Hřejivá vesta" },
+      "5": { "category": "Vybavení", "name": "Taška P31" },
+      "6": { "category": "Doplňky", "name": "Šála Klub 31" }
+    }
+  },
+  "platba": {
+    "badge": "Registrace přijata · VS {vs}",
+    "titleLine1": "Zaplať a máš",
+    "titleHighlight": "místo",
+    "intro": "Naskenuj QR kód v bankovní aplikaci nebo zadej údaje ručně. Platbu očekáváme do <b>7 dní</b>, jinak místo uvolníme.",
+    "back": "Zpět na úvod"
+  },
+  "payment": {
+    "summaryType": "Typ účasti",
+    "summaryName": "Jméno",
+    "summaryAccount": "Číslo účtu",
+    "spaydLabel": "SPAYD · CZK",
+    "transferLabel": "Bankovní převod",
+    "rowAmount": "Částka",
+    "rowAccount": "Číslo účtu",
+    "rowIban": "IBAN",
+    "rowVs": "Variabilní symbol",
+    "rowMessage": "Zpráva pro příjemce",
+    "copyLabel": "Zkopírovat platební údaje",
+    "copied": "Zkopírováno ✓",
+    "importantLabel": "Důležité",
+    "important": "Použij variabilní symbol <b>{vs}</b>, ať platbu spárujeme. Po připsání ti pošleme potvrzení e‑mailem.",
+    "defaultFirstName": "Jméno",
+    "defaultLastName": "Příjmení"
+  }
+}
