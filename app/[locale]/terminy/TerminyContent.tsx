@@ -4,8 +4,9 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { EVENT, TIERS } from '@/lib/constants';
+import { EVENT, TIERS, CAMPS } from '@/lib/constants';
 import RegistrationForm from '@/components/RegistrationForm';
+import TournamentCard from '@/components/TournamentCard';
 
 const reveal = {
   initial: { opacity: 0, y: 24 },
@@ -191,6 +192,21 @@ export default function TerminyContent() {
               ))}
             </div>
           </div>
+
+          {/* Turnaje – samostatná sekce pod standardními termíny */}
+          {CAMPS.some((camp) => camp.type === 'tournament') && (
+            <>
+              <div className="flex items-center gap-4 mt-24 mb-10">
+                <span className="font-mono text-[11px] tracking-[0.3em] text-p31-red uppercase">Turnaje</span>
+                <div className="flex-1 h-px bg-[rgba(255,255,255,0.08)]" />
+              </div>
+              <div className="flex flex-col gap-6">
+                {CAMPS.filter((camp) => camp.type === 'tournament').map((camp) => (
+                  <TournamentCard key={camp.id} camp={camp} />
+                ))}
+              </div>
+            </>
+          )}
         </div>
       </motion.div>
 

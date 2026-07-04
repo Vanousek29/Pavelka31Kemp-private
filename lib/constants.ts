@@ -1,4 +1,4 @@
-import type { Tier, Trainer, Sponsor, Achievement, Offering, DaySchedule, GalleryItem, ContactInfo, Product } from './types';
+import type { Tier, Trainer, Sponsor, Achievement, Offering, DaySchedule, GalleryItem, ContactInfo, Product, Camp } from './types';
 
 export const PAYMENT = {
   iban: 'CZ1030300000003659422010',
@@ -67,6 +67,93 @@ export const TIERS: Tier[] = [
   { key: 'hrac_2dny', price: '1 050 Kč', priceCzk: 1050 },
   { key: 'strelec', price: '199 Kč', priceCzk: 199 },
   { key: 'individual', price: '', priceCzk: 0, contact: true },
+];
+
+// Termíny a akce – nové akce 2026 (individuální tréninky, tréninkový den, turnaj)
+export const CAMPS: Camp[] = [
+  {
+    id: 'individual-jul',
+    name: 'Individuální tréninky',
+    type: 'individual',
+    dateFrom: '2026-07-05',
+    dateTo: '2026-07-06',
+    location: 'Kapka Resort Vsetín',
+    city: 'Vsetín',
+    program: [
+      { den: 'Neděle 5. 7.', cas: '12:00–13:00', typ: 'Led' },
+      { den: 'Neděle 5. 7.', cas: '13:30–14:30', typ: 'Suchá příprava' },
+      { den: 'Pondělí 6. 7.', cas: '20:00', typ: 'Sraz' },
+      { den: 'Pondělí 6. 7.', cas: '20:15–21:00', typ: 'Suchá příprava' },
+      { den: 'Pondělí 6. 7.', cas: '21:30–22:30', typ: 'Led' },
+    ],
+    ageGroup: 'Všechny kategorie',
+    price: 599,
+    capacity: 20,
+    registered: 0,
+    status: 'open',
+  },
+  {
+    id: 'training-aug',
+    name: 'Tréninkový den',
+    type: 'training',
+    dateFrom: '2026-08-01',
+    dateTo: '2026-08-01',
+    location: 'Kapka Resort Vsetín',
+    city: 'Vsetín',
+    program: [
+      { den: 'Sobota 1. 8.', cas: 'TBD', typ: 'Trénink' },
+    ],
+    ageGroup: 'Všechny kategorie',
+    price: 699,
+    capacity: 20,
+    registered: 0,
+    status: 'open',
+  },
+  {
+    id: 'medvedi-turnaj',
+    name: 'Medvědí turnaj 3v3',
+    type: 'tournament',
+    dateFrom: '2026-08-02',
+    dateTo: '2026-08-02',
+    location: 'Kapka Resort Vsetín',
+    city: 'Vsetín',
+    ageGroup: 'Všechny kategorie',
+    price: 3500,
+    priceNote: 'cena za tým (3–5 hráčů + 1 brankář)',
+    capacity: 5,
+    registered: 2, // Team Jarda Pavelka, Team Mojža – obsazené
+    status: 'few_spots', // poslední 3 volné týmy
+    tournament: {
+      nazev: 'Medvědí turnaj',
+      format: 'Každý s každým → semifinále → finále',
+      tym: '3–5 hráčů + 1 brankář',
+      cena: 3500,
+      prihlaseni: 'Název týmu poslat do WhatsApp skupiny nebo DM na IG',
+      tymy: [
+        { nazev: 'Team Jarda Pavelka', status: 'obsazeno' },
+        { nazev: 'Team Mojža', status: 'obsazeno' },
+        { nazev: 'Volné místo', status: 'volno' },
+        { nazev: 'Volné místo', status: 'volno' },
+        { nazev: 'Volné místo', status: 'volno' },
+      ],
+      ceny: [
+        'Putovní pohár pro vítěze',
+        'Poháry pro 1.–2.–3. místo',
+        'Medaile pro všechny účastníky',
+        'Sponzorské dary',
+        'Tombola',
+      ],
+      zahrnuto: [
+        'Občerstvení v kabině v ceně',
+        'Dárky pro účastníky',
+        'Rozhodčí zajištěn',
+        'Možnost hřiště/pískoviště pro děti',
+      ],
+      ubytovani: 'Ubytování a wellness k dispozici – hradí každý sám individuálně',
+      rozhodci: true,
+      sponzori: true,
+    },
+  },
 ];
 
 // Trenéři – tag + foto; jméno a role viz trainers.byTag.<tag>

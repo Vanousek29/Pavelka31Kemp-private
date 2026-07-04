@@ -1,15 +1,50 @@
+// Typ akce – rozlišuje způsob zobrazení na stránce /terminy
+export type CampType = 'individual' | 'training' | 'tournament' | 'camp';
+
+// Blok programu akce (den / čas / typ aktivity)
+export interface ProgramBlock {
+  den: string;
+  cas: string;
+  typ: string;
+}
+
+// Tým v turnaji – buď obsazený, nebo volné místo
+export interface TournamentTeam {
+  nazev: string;
+  status: 'obsazeno' | 'volno';
+}
+
+// Detailní data turnaje (typ akce 'tournament')
+export interface TournamentInfo {
+  nazev: string;
+  format: string;
+  tym: string;
+  cena: number;
+  prihlaseni: string;
+  tymy: TournamentTeam[];
+  ceny: string[];
+  zahrnuto: string[];
+  ubytovani: string;
+  rozhodci: boolean;
+  sponzori: boolean;
+}
+
 export interface Camp {
   id: string;
   name: string;
+  type?: CampType;
   dateFrom: string;
   dateTo: string;
   location: string;
   city: string;
+  program?: ProgramBlock[];
   ageGroup: string;
   price: number;
+  priceNote?: string;
   capacity: number;
   registered: number;
   status: 'open' | 'few_spots' | 'full';
+  tournament?: TournamentInfo;
 }
 
 // Strukturální data tieru – texty (role, desc) jsou v překladech pod terminy.tiers.<key>
