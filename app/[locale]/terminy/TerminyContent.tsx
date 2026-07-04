@@ -52,25 +52,10 @@ export default function TerminyContent() {
           >
             {t('titleLine1')}<br /><span className="text-p31-red">{t('titleHighlight')}</span>
           </h1>
-          <div className="font-mono text-[13px] text-p31-muted tracking-[0.2em] uppercase">{te('datesSummary')} · {te('place')}</div>
+          <div className="font-mono text-[13px] text-p31-muted tracking-[0.2em] uppercase">{te('place')}</div>
           <p className="text-[17px] leading-[1.6] text-p31-muted max-w-[620px] mt-5 mb-0">
             {t('intro')}
           </p>
-
-          {/* Termíny – dvě rovnocenné karty */}
-          <div className="flex items-center gap-4 mt-16 mb-8">
-            <span className="font-mono text-[11px] tracking-[0.3em] text-p31-red uppercase">{te('termsLabel')}</span>
-            <div className="flex-1 h-px bg-[rgba(255,255,255,0.08)]" />
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {EVENT.termIds.map((id) => (
-              <div key={id} className="bg-p31-bg-secondary border border-p31-border border-l-2 border-l-p31-red p-8 flex flex-col gap-2">
-                <div className="font-mono text-[10px] text-p31-red tracking-[0.3em] uppercase">{te(`terms.${id}.label`)}</div>
-                <div className="font-heading text-[44px] text-white leading-none tracking-[0.005em]">{te(`terms.${id}.dateFull`)}</div>
-                <div className="font-mono text-[11px] text-p31-muted tracking-[0.15em] uppercase mt-1">{te('place')}</div>
-              </div>
-            ))}
-          </div>
 
           {/* Program heading */}
           <div className="flex items-center gap-4 mt-16 mb-10">
