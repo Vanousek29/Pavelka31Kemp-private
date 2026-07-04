@@ -194,6 +194,79 @@
     "guestRoles": ["Guest coach · skaters", "Guest coach · goalies", "Goalie camp · day 2"],
     "included": ["Fruit and water available", "Post-training video analysis", "Cool-down after sessions", "Free coffee / water", "A small gift for everyone"]
   },
+  "camps": {
+    "sectionLabel": "Events & training",
+    "badgeIndividual": "Individual",
+    "badgeTraining": "Training day",
+    "statusOpen": "Spots available",
+    "programLabel": "Schedule",
+    "priceLabel": "Price",
+    "freeSpots": "{count} spots left",
+    "full": "Full",
+    "ageGroup": "All age groups",
+    "typ": {
+      "led": "Ice",
+      "sucha": "Dryland",
+      "sraz": "Meet-up",
+      "trenink": "Training"
+    },
+    "items": {
+      "individual-5-7": { "name": "Individual training" },
+      "individual-6-7": { "name": "Individual training" },
+      "training-aug": { "name": "Training day" },
+      "medvedi-turnaj": { "name": "Medvěd Cup" }
+    }
+  },
+  "tournament": {
+    "sectionLabel": "Tournaments",
+    "badge": "Tournament",
+    "lastSpots": "Last {count} team spots",
+    "format": "Round robin → semifinal → final",
+    "team": "3–5 players + 1 goalie",
+    "teamsLabel": "Teams",
+    "occupied": "Taken",
+    "freeSpot": "Open spot",
+    "includedLabel": "Included",
+    "included": ["Locker-room refreshments included", "Gifts for participants", "Referee provided", "Playground/sandpit available for kids"],
+    "prizesLabel": "Prizes & medals",
+    "prizes": ["Challenge trophy for the winner", "Cups for 1st–2nd–3rd place", "Medals for all participants", "Sponsor gifts", "Raffle"],
+    "accommodationLabel": "Accommodation & wellness",
+    "accommodation": "Accommodation and wellness available – paid individually by each participant",
+    "pricePerTeam": "Price per team",
+    "priceNote": "price per team (3–5 players + 1 goalie)",
+    "signupNote": "Send your team name to the WhatsApp group or DM us on IG",
+    "registerTeam": "Register a team",
+    "full": "Full",
+    "table": {
+      "title": "Group stage – round robin",
+      "note": "The group stage is followed by a semifinal and the final. The winner takes the challenge trophy.",
+      "freeBadge": "Open",
+      "teamPlaceholder": "Team {num}"
+    },
+    "banner": {
+      "title": "🏆 Medvěd Cup 2026",
+      "teams": "5-team tournament",
+      "date": "Aug 2, 2026",
+      "spots": "Last 3 spots available",
+      "close": "Dismiss notification"
+    },
+    "form": {
+      "label": "Team registration",
+      "close": "Close",
+      "teamName": "Team name",
+      "teamNamePlaceholder": "e.g. Medvědi Vsetín",
+      "captainName": "Captain's name",
+      "captainPlaceholder": "First and last name",
+      "email": "E-mail",
+      "phone": "Phone",
+      "playerCount": "Number of players",
+      "players": "{count, plural, one {# player} other {# players}}",
+      "ownGoalie": "We have our own goalie",
+      "toPay": "To pay",
+      "cancel": "Cancel",
+      "continueToPayment": "Continue to payment"
+    }
+  },
   "form": {
     "label": "Registration",
     "close": "Close",

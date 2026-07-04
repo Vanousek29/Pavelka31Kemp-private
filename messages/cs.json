@@ -194,6 +194,79 @@
     "guestRoles": ["Host tréninku · hráči", "Host tréninku · brankáři", "Brankářský kemp · 2. den"],
     "included": ["Ovoce a voda k dispozici", "Video analýza po tréninku", "Výklus po zátěži", "Káva / voda zdarma", "Malý dárek pro každého"]
   },
+  "camps": {
+    "sectionLabel": "Akce & tréninky",
+    "badgeIndividual": "Individuál",
+    "badgeTraining": "Tréninkový den",
+    "statusOpen": "Volno",
+    "programLabel": "Program",
+    "priceLabel": "Cena",
+    "freeSpots": "{count} volných míst",
+    "full": "Obsazeno",
+    "ageGroup": "Všechny kategorie",
+    "typ": {
+      "led": "Led",
+      "sucha": "Suchá příprava",
+      "sraz": "Sraz",
+      "trenink": "Trénink"
+    },
+    "items": {
+      "individual-5-7": { "name": "Individuální trénink" },
+      "individual-6-7": { "name": "Individuální trénink" },
+      "training-aug": { "name": "Tréninkový den" },
+      "medvedi-turnaj": { "name": "Medvěd Cup" }
+    }
+  },
+  "tournament": {
+    "sectionLabel": "Turnaje",
+    "badge": "Turnaj",
+    "lastSpots": "Poslední {count} volné týmy",
+    "format": "Každý s každým → semifinále → finále",
+    "team": "3–5 hráčů + 1 brankář",
+    "teamsLabel": "Týmy",
+    "occupied": "Obsazeno",
+    "freeSpot": "Volné místo",
+    "includedLabel": "V ceně",
+    "included": ["Občerstvení v kabině v ceně", "Dárky pro účastníky", "Rozhodčí zajištěn", "Možnost hřiště/pískoviště pro děti"],
+    "prizesLabel": "Ceny & medaile",
+    "prizes": ["Putovní pohár pro vítěze", "Poháry pro 1.–2.–3. místo", "Medaile pro všechny účastníky", "Sponzorské dary", "Tombola"],
+    "accommodationLabel": "Ubytování & wellness",
+    "accommodation": "Ubytování a wellness k dispozici – hradí každý sám individuálně",
+    "pricePerTeam": "Cena za tým",
+    "priceNote": "cena za tým (3–5 hráčů + 1 brankář)",
+    "signupNote": "Název týmu poslat do WhatsApp skupiny nebo DM na IG",
+    "registerTeam": "Přihlásit tým",
+    "full": "Obsazeno",
+    "table": {
+      "title": "Základní skupina – každý s každým",
+      "note": "Po skupině následuje semifinále a finále. Vítěz získává putovní pohár.",
+      "freeBadge": "Volné",
+      "teamPlaceholder": "Tým {num}"
+    },
+    "banner": {
+      "title": "🏆 Medvěd Cup 2026",
+      "teams": "Turnaj 5 týmů",
+      "date": "2. 8. 2026",
+      "spots": "Poslední 3 volná místa",
+      "close": "Zavřít upozornění"
+    },
+    "form": {
+      "label": "Přihláška týmu",
+      "close": "Zavřít",
+      "teamName": "Název týmu",
+      "teamNamePlaceholder": "Např. Medvědi Vsetín",
+      "captainName": "Jméno kapitána",
+      "captainPlaceholder": "Jméno a příjmení",
+      "email": "E-mail",
+      "phone": "Telefon",
+      "playerCount": "Počet hráčů",
+      "players": "{count, plural, few {# hráči} other {# hráčů}}",
+      "ownGoalie": "Máme vlastního brankáře",
+      "toPay": "K úhradě",
+      "cancel": "Zrušit",
+      "continueToPayment": "Pokračovat k platbě"
+    }
+  },
   "form": {
     "label": "Registrace",
     "close": "Zavřít",

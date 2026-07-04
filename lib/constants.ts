@@ -70,23 +70,36 @@ export const TIERS: Tier[] = [
 ];
 
 // Termíny a akce – nové akce 2026 (individuální tréninky, tréninkový den, turnaj)
+// Názvy akcí viz camps.items.<id>.name; texty turnaje viz tournament.* v překladech
 export const CAMPS: Camp[] = [
   {
-    id: 'individual-jul',
-    name: 'Individuální tréninky',
+    id: 'individual-5-7',
     type: 'individual',
     dateFrom: '2026-07-05',
+    dateTo: '2026-07-05',
+    location: 'Kapka Resort Vsetín',
+    city: 'Vsetín',
+    program: [
+      { cas: '20:00', typ: 'sraz' },
+      { cas: '20:15–21:00', typ: 'sucha' },
+      { cas: '21:30–22:30', typ: 'led' },
+    ],
+    price: 599,
+    capacity: 20,
+    registered: 0,
+    status: 'open',
+  },
+  {
+    id: 'individual-6-7',
+    type: 'individual',
+    dateFrom: '2026-07-06',
     dateTo: '2026-07-06',
     location: 'Kapka Resort Vsetín',
     city: 'Vsetín',
     program: [
-      { den: 'Neděle 5. 7.', cas: '12:00–13:00', typ: 'Led' },
-      { den: 'Neděle 5. 7.', cas: '13:30–14:30', typ: 'Suchá příprava' },
-      { den: 'Pondělí 6. 7.', cas: '20:00', typ: 'Sraz' },
-      { den: 'Pondělí 6. 7.', cas: '20:15–21:00', typ: 'Suchá příprava' },
-      { den: 'Pondělí 6. 7.', cas: '21:30–22:30', typ: 'Led' },
+      { cas: '12:00–13:00', typ: 'led' },
+      { cas: '13:30–14:30', typ: 'sucha' },
     ],
-    ageGroup: 'Všechny kategorie',
     price: 599,
     capacity: 20,
     registered: 0,
@@ -94,16 +107,14 @@ export const CAMPS: Camp[] = [
   },
   {
     id: 'training-aug',
-    name: 'Tréninkový den',
     type: 'training',
     dateFrom: '2026-08-01',
     dateTo: '2026-08-01',
     location: 'Kapka Resort Vsetín',
     city: 'Vsetín',
     program: [
-      { den: 'Sobota 1. 8.', cas: 'TBD', typ: 'Trénink' },
+      { cas: 'TBD', typ: 'trenink' },
     ],
-    ageGroup: 'Všechny kategorie',
     price: 699,
     capacity: 20,
     registered: 0,
@@ -111,45 +122,26 @@ export const CAMPS: Camp[] = [
   },
   {
     id: 'medvedi-turnaj',
-    name: 'Medvědí turnaj 3v3',
     type: 'tournament',
     dateFrom: '2026-08-02',
     dateTo: '2026-08-02',
     location: 'Kapka Resort Vsetín',
     city: 'Vsetín',
-    ageGroup: 'Všechny kategorie',
     price: 3500,
-    priceNote: 'cena za tým (3–5 hráčů + 1 brankář)',
     capacity: 5,
-    registered: 2, // Team Jarda Pavelka, Team Mojža – obsazené
+    registered: 2, // Mojža team, Jareček team – obsazené
     status: 'few_spots', // poslední 3 volné týmy
     tournament: {
-      nazev: 'Medvědí turnaj',
-      format: 'Každý s každým → semifinále → finále',
-      tym: '3–5 hráčů + 1 brankář',
+      nazev: 'Medvěd Cup',
       cena: 3500,
-      prihlaseni: 'Název týmu poslat do WhatsApp skupiny nebo DM na IG',
       tymy: [
-        { nazev: 'Team Jarda Pavelka', status: 'obsazeno' },
-        { nazev: 'Team Mojža', status: 'obsazeno' },
-        { nazev: 'Volné místo', status: 'volno' },
-        { nazev: 'Volné místo', status: 'volno' },
-        { nazev: 'Volné místo', status: 'volno' },
+        { nazev: 'Mojža team', status: 'obsazeno' },
+        { nazev: 'Jareček team', status: 'obsazeno' },
+        // Nazev volných míst se nezobrazuje – v UI se překládá tournament.freeSpot
+        { nazev: '', status: 'volno' },
+        { nazev: '', status: 'volno' },
+        { nazev: '', status: 'volno' },
       ],
-      ceny: [
-        'Putovní pohár pro vítěze',
-        'Poháry pro 1.–2.–3. místo',
-        'Medaile pro všechny účastníky',
-        'Sponzorské dary',
-        'Tombola',
-      ],
-      zahrnuto: [
-        'Občerstvení v kabině v ceně',
-        'Dárky pro účastníky',
-        'Rozhodčí zajištěn',
-        'Možnost hřiště/pískoviště pro děti',
-      ],
-      ubytovani: 'Ubytování a wellness k dispozici – hradí každý sám individuálně',
       rozhodci: true,
       sponzori: true,
     },

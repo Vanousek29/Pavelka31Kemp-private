@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { EVENT, TIERS, CAMPS } from '@/lib/constants';
 import RegistrationForm from '@/components/RegistrationForm';
+import CampCard from '@/components/CampCard';
 import TournamentCard from '@/components/TournamentCard';
 
 const reveal = {
@@ -24,6 +25,8 @@ const tagColors: Record<string, string> = {
 export default function TerminyContent() {
   const t = useTranslations('terminy');
   const te = useTranslations('event');
+  const tc = useTranslations('camps');
+  const tt = useTranslations('tournament');
   const [modalOpen, setModalOpen] = useState(false);
   const [defaultRole, setDefaultRole] = useState('');
 
@@ -193,16 +196,33 @@ export default function TerminyContent() {
             </div>
           </div>
 
+          {/* Akce a individuální tréninky – každá jako samostatná karta */}
+          {CAMPS.some((camp) => camp.type === 'individual' || camp.type === 'training') && (
+            <>
+              <div className="flex items-center gap-4 mt-24 mb-10">
+                <span className="font-mono text-[11px] tracking-[0.3em] text-p31-red uppercase">{tc('sectionLabel')}</span>
+                <div className="flex-1 h-px bg-[rgba(255,255,255,0.08)]" />
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {CAMPS.filter((camp) => camp.type === 'individual' || camp.type === 'training').map((camp) => (
+                  <CampCard key={camp.id} camp={camp} />
+                ))}
+              </div>
+            </>
+          )}
+
           {/* Turnaje – samostatná sekce pod standardními termíny */}
           {CAMPS.some((camp) => camp.type === 'tournament') && (
             <>
               <div className="flex items-center gap-4 mt-24 mb-10">
-                <span className="font-mono text-[11px] tracking-[0.3em] text-p31-red uppercase">Turnaje</span>
+                <span className="font-mono text-[11px] tracking-[0.3em] text-p31-red uppercase">{tt('sectionLabel')}</span>
                 <div className="flex-1 h-px bg-[rgba(255,255,255,0.08)]" />
               </div>
               <div className="flex flex-col gap-6">
                 {CAMPS.filter((camp) => camp.type === 'tournament').map((camp) => (
-                  <TournamentCard key={camp.id} camp={camp} />
+                  <div key={camp.id} id={camp.id} className="scroll-mt-28">
+                    <TournamentCard camp={camp} />
+                  </div>
                 ))}
               </div>
             </>

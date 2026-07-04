@@ -31,9 +31,14 @@ const config: Config = {
           '0%, 100%': { opacity: '0.55' },
           '50%': { opacity: '1' },
         },
+        'p31-shine': {
+          '0%': { transform: 'translateX(-150%) skewX(-20deg)' },
+          '100%': { transform: 'translateX(350%) skewX(-20deg)' },
+        },
       },
       animation: {
         'p31-pulse': 'p31-pulse 2s ease-in-out infinite',
+        'p31-shine': 'p31-shine 4s ease-in-out infinite',
       },
     },
   },
