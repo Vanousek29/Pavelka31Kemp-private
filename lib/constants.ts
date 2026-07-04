@@ -80,9 +80,8 @@ export const CAMPS: Camp[] = [
     location: 'Kapka Resort Vsetín',
     city: 'Vsetín',
     program: [
-      { cas: '20:00', typ: 'sraz' },
-      { cas: '20:15–21:00', typ: 'sucha' },
-      { cas: '21:30–22:30', typ: 'led' },
+      { cas: '12:00–13:00', typ: 'led' },
+      { cas: '13:30–14:30', typ: 'sucha' },
     ],
     price: 599,
     capacity: 20,
@@ -97,8 +96,9 @@ export const CAMPS: Camp[] = [
     location: 'Kapka Resort Vsetín',
     city: 'Vsetín',
     program: [
-      { cas: '12:00–13:00', typ: 'led' },
-      { cas: '13:30–14:30', typ: 'sucha' },
+      { cas: '20:00', typ: 'sraz' },
+      { cas: '20:15–21:00', typ: 'sucha' },
+      { cas: '21:30–22:30', typ: 'led' },
     ],
     price: 599,
     capacity: 20,
