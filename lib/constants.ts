@@ -136,7 +136,7 @@ export const CAMPS: Camp[] = [
       cena: 3500,
       tymy: [
         { nazev: 'Mojža team', status: 'obsazeno' },
-        { nazev: 'Jareček team', status: 'obsazeno' },
+        { nazev: 'Jarček team', status: 'obsazeno' },
         // Nazev volných míst se nezobrazuje – v UI se překládá tournament.freeSpot
         { nazev: '', status: 'volno' },
         { nazev: '', status: 'volno' },
