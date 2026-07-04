@@ -200,6 +200,7 @@
     "badgeTraining": "Training day",
     "statusOpen": "Spots available",
     "programLabel": "Schedule",
+    "programTbd": "Schedule to be announced",
     "priceLabel": "Price",
     "freeSpots": "{count} spots left",
     "full": "Full",

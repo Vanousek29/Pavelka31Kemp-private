@@ -57,9 +57,9 @@ export default function CampCard({ camp }: CampCardProps) {
       </div>
 
       {/* Program */}
-      {camp.program && camp.program.length > 0 && (
-        <div className="px-8 py-7 border-b border-p31-border flex-1">
-          <div className="font-mono text-[10px] text-p31-red tracking-[0.3em] uppercase mb-5">{t('programLabel')}</div>
+      <div className="px-8 py-7 border-b border-p31-border flex-1">
+        <div className="font-mono text-[10px] text-p31-red tracking-[0.3em] uppercase mb-5">{t('programLabel')}</div>
+        {camp.program && camp.program.length > 0 ? (
           <div className="flex flex-col gap-px bg-p31-border border border-p31-border">
             {camp.program.map((block, i) => (
               <div key={i} className="bg-p31-bg-secondary px-5 py-4 flex items-center justify-between gap-4">
@@ -74,8 +74,10 @@ export default function CampCard({ camp }: CampCardProps) {
               </div>
             ))}
           </div>
-        </div>
-      )}
+        ) : (
+          <p className="text-[14px] text-p31-muted m-0">{t('programTbd')}</p>
+        )}
+      </div>
 
       {/* Cena + kapacita */}
       <div className="px-8 py-6 flex flex-wrap items-center justify-between gap-4">

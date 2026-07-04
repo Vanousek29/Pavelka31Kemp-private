@@ -112,9 +112,7 @@ export const CAMPS: Camp[] = [
     dateTo: '2026-08-01',
     location: 'Kapka Resort Vsetín',
     city: 'Vsetín',
-    program: [
-      { cas: 'TBD', typ: 'trenink' },
-    ],
+    // Program bez rozpisu → CampCard zobrazí "Program upřesníme" (camps.programTbd)
     price: 699,
     capacity: 20,
     registered: 0,
@@ -136,7 +134,7 @@ export const CAMPS: Camp[] = [
       cena: 3500,
       tymy: [
         { nazev: 'Mojža team', status: 'obsazeno' },
-        { nazev: 'Jarček team', status: 'obsazeno' },
+        { nazev: 'Jarcek team', status: 'obsazeno' },
         // Nazev volných míst se nezobrazuje – v UI se překládá tournament.freeSpot
         { nazev: '', status: 'volno' },
         { nazev: '', status: 'volno' },
