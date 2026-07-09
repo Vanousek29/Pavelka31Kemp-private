@@ -20,7 +20,6 @@ interface CampCardProps {
 export default function CampCard({ camp }: CampCardProps) {
   const t = useTranslations('camps');
   const locale = useLocale();
-  const freeSpots = camp.capacity - camp.registered;
   const focusKey = `items.${camp.id}.focus`;
   const focus = t.has(focusKey) ? (t.raw(focusKey) as string[]) : [];
 
@@ -35,9 +34,6 @@ export default function CampCard({ camp }: CampCardProps) {
               {camp.type === 'training' ? t('badgeTraining') : t('badgeIndividual')}
             </span>
           </span>
-          {camp.status === 'open' && (
-            <span className="font-mono text-[10px] text-[#4ade80] tracking-[0.2em] uppercase">{t('statusOpen')}</span>
-          )}
         </div>
         <h3 className="font-heading text-[36px] text-white leading-[0.95] tracking-[0.01em] m-0 uppercase">
           {t(`items.${camp.id}.name`)}
@@ -103,9 +99,6 @@ export default function CampCard({ camp }: CampCardProps) {
           <div className="font-heading text-[36px] text-white leading-none tracking-[0.02em]">
             {formatPrice(camp.price, locale)}
           </div>
-        </div>
-        <div className="font-mono text-[10px] text-p31-muted tracking-[0.15em] uppercase">
-          {freeSpots > 0 ? t('freeSpots', { count: freeSpots }) : t('full')}
         </div>
       </div>
     </div>
