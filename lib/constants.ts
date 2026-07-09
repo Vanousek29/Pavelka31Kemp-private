@@ -106,6 +106,22 @@ export const CAMPS: Camp[] = [
     status: 'open',
   },
   {
+    id: 'goalie-nachod-19-7',
+    type: 'training',
+    dateFrom: '2026-07-19',
+    dateTo: '2026-07-19',
+    location: 'Zimní stadion Náchod',
+    city: 'Náchod',
+    program: [
+      { cas: '7:45–8:45', typ: 'led' },
+      { cas: '9:00–9:30', typ: 'sucha' },
+    ],
+    price: 799,
+    capacity: 20,
+    registered: 0,
+    status: 'open',
+  },
+  {
     id: 'training-aug',
     type: 'training',
     dateFrom: '2026-08-01',

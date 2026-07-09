@@ -1,7 +1,7 @@
 'use client';
 
 import { useLocale, useTranslations } from 'next-intl';
-import { Calendar, MapPin, Users, Dumbbell } from 'lucide-react';
+import { Calendar, MapPin, Users, Dumbbell, Target } from 'lucide-react';
 import { formatDate, formatPrice } from '@/lib/utils';
 import type { Camp } from '@/lib/types';
 
@@ -21,6 +21,8 @@ export default function CampCard({ camp }: CampCardProps) {
   const t = useTranslations('camps');
   const locale = useLocale();
   const freeSpots = camp.capacity - camp.registered;
+  const focusKey = `items.${camp.id}.focus`;
+  const focus = t.has(focusKey) ? (t.raw(focusKey) as string[]) : [];
 
   return (
     <div className="bg-p31-bg-secondary border border-p31-border border-l-2 border-l-p31-red flex flex-col">
@@ -78,6 +80,21 @@ export default function CampCard({ camp }: CampCardProps) {
           <p className="text-[14px] text-p31-muted m-0">{t('programTbd')}</p>
         )}
       </div>
+
+      {/* Náplň tréninku */}
+      {focus.length > 0 && (
+        <div className="px-8 py-7 border-b border-p31-border">
+          <div className="font-mono text-[10px] text-p31-red tracking-[0.3em] uppercase mb-5">{t('focusLabel')}</div>
+          <ul className="flex flex-col gap-3 m-0 p-0 list-none">
+            {focus.map((item) => (
+              <li key={item} className="flex items-start gap-3">
+                <Target size={15} className="text-p31-red flex-shrink-0 mt-0.5" />
+                <span className="text-[14px] text-white leading-[1.45]">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       {/* Cena + kapacita */}
       <div className="px-8 py-6 flex flex-wrap items-center justify-between gap-4">
