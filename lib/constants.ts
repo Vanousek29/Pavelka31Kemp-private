@@ -143,8 +143,8 @@ export const CAMPS: Camp[] = [
     city: 'Vsetín',
     price: 3500,
     capacity: 5,
-    registered: 3, // Mojža team, Horny Dogs, Jareček team – obsazené
-    status: 'few_spots', // poslední 2 volné týmy
+    registered: 4, // Mojža team, Horny Dogs, Jareček team, KROMCL team – obsazené
+    status: 'few_spots', // poslední 1 volný tým
     tournament: {
       nazev: 'Medvěd Cup',
       cena: 3500,
@@ -152,8 +152,8 @@ export const CAMPS: Camp[] = [
         { nazev: 'Mojža team', status: 'obsazeno' },
         { nazev: 'Horny Dogs', status: 'obsazeno' },
         { nazev: 'Jarcek team', status: 'obsazeno' },
+        { nazev: 'KROMCL team', status: 'obsazeno' },
         // Nazev volných míst se nezobrazuje – v UI se překládá tournament.freeSpot
-        { nazev: '', status: 'volno' },
         { nazev: '', status: 'volno' },
       ],
       rozhodci: true,
