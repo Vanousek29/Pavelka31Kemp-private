@@ -227,6 +227,7 @@
     "sectionLabel": "Turnaje",
     "badge": "Turnaj",
     "lastSpots": "Poslední {count} volné týmy",
+    "soldOut": "Žádná volná místa – připravte se na turnaj",
     "format": "Každý s každým → semifinále → finále",
     "team": "3–5 hráčů + 1 brankář",
     "teamsLabel": "Týmy",

@@ -33,9 +33,13 @@ export default function TournamentCard({ camp }: TournamentCardProps) {
               <Trophy size={13} className="text-p31-red" />
               <span className="font-mono text-[10px] text-p31-red tracking-[0.25em] uppercase">{tr('badge')}</span>
             </span>
-            {freeSpots > 0 && (
+            {freeSpots > 0 ? (
               <span className="font-mono text-[10px] text-[#D9A441] tracking-[0.2em] uppercase">
                 {tr('lastSpots', { count: freeSpots })}
+              </span>
+            ) : (
+              <span className="font-mono text-[10px] text-[#D9A441] tracking-[0.2em] uppercase">
+                {tr('soldOut')}
               </span>
             )}
           </div>

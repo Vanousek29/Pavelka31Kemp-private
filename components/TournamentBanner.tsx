@@ -40,7 +40,6 @@ export default function TournamentBanner() {
           {t('title')}
           <span className="hidden sm:inline"> · {t('teams')}</span>
           <span> · {t('date')}</span>
-          <span className="text-[#D9A441]"> · {t('spots')}</span>
         </span>
         <span className="font-mono text-[13px] text-white transition-transform group-hover:translate-x-1 flex-shrink-0">
           &rarr;
