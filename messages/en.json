@@ -213,12 +213,6 @@
       "trenink": "Training"
     },
     "items": {
-      "individual-5-7": { "name": "Individual training" },
-      "individual-6-7": { "name": "Individual training" },
-      "goalie-nachod-19-7": {
-        "name": "Goalie training Náchod",
-        "focus": ["Technique & stance", "Reactions & movement", "Shooting under pressure"]
-      },
       "training-aug": { "name": "Training day" },
       "medvedi-turnaj": { "name": "Medvěd Cup" }
     }

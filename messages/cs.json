@@ -213,12 +213,6 @@
       "trenink": "Trénink"
     },
     "items": {
-      "individual-5-7": { "name": "Individuální trénink" },
-      "individual-6-7": { "name": "Individuální trénink" },
-      "goalie-nachod-19-7": {
-        "name": "Brankářský trénink Náchod",
-        "focus": ["Technika a postoj", "Reakce a přesuny", "Střelba pod tlakem"]
-      },
       "training-aug": { "name": "Tréninkový den" },
       "medvedi-turnaj": { "name": "Medvěd Cup" }
     }
