@@ -128,7 +128,11 @@ export const CAMPS: Camp[] = [
     dateTo: '2026-08-01',
     location: 'Kapka Resort Vsetín',
     city: 'Vsetín',
-    // Program bez rozpisu → CampCard zobrazí "Program upřesníme" (camps.programTbd)
+    program: [
+      { cas: '9:00', typ: 'sraz' },
+      { cas: '9:10–9:40', typ: 'sucha' },
+      { cas: '10:00–11:00', typ: 'led' },
+    ],
     price: 699,
     capacity: 20,
     registered: 0,
