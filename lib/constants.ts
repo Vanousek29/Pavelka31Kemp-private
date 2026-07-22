@@ -77,8 +77,8 @@ export const CAMPS: Camp[] = [
     type: 'training',
     dateFrom: '2026-08-01',
     dateTo: '2026-08-01',
-    location: 'Kapka Resort Vsetín',
-    city: 'Vsetín',
+    location: 'Zimní stadion Náchod',
+    city: 'Náchod',
     program: [
       { cas: '9:00', typ: 'sraz' },
       { cas: '9:10–9:40', typ: 'sucha' },
