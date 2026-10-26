@@ -86,8 +86,8 @@ export default async function LocaleLayout({
       <body
         className={`${bebasNeue.variable} ${inter.variable} ${jetbrainsMono.variable} bg-p31-bg text-white font-body antialiased`}
       >
-        <div className="fixed top-0 inset-x-0 z-[9999] bg-p31-red text-white text-center font-heading tracking-wide text-2xl md:text-3xl py-3 px-4 shadow-lg">
-          nenechám se sebou vyjebávat, díky
+        <div className="fixed top-0 inset-x-0 z-[9999] bg-p31-red text-white text-center font-body font-medium text-sm md:text-base py-3 px-4 shadow-lg">
+          Web je dočasně pozastaven z důvodu neuhrazené platby za jeho vytvoření.
         </div>
         {/* Web je jen na ukázku – nic se nedá kliknout ani vyplnit */}
         <div className="pointer-events-none select-none">
