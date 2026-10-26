@@ -66,16 +66,6 @@ export default async function HomePage({
             Ty víš, kdo jsi. Doufáme, že tahle stránka ti připomene cestu k bankovnímu účtu. 👋
           </p>
         </div>
-
-        {/* Divider */}
-        <div className="border-t border-white/10" />
-
-        {/* Footer note */}
-        <p className="text-white/25 font-mono text-xs uppercase tracking-widest">
-          Provoz bude obnoven ihned po připsání dlužné částky.
-          <br />
-          Nebo až nám dojde trpělivost — co nastane dřív.
-        </p>
       </div>
     </div>
   );
