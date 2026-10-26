@@ -34,3 +34,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local exports (Medvěd Cup tisková tabulka apod.)
+/medved-cup.pdf
+/medved-cup.png
+/medved-cup-4.pdf
+/medved-cup-4.png
